@@ -49,6 +49,12 @@ npm run preview  # preview the built site locally
 Each post automatically gets a canonical URL, `<meta>` description, Open Graph +
 Twitter cards, `BlogPosting` JSON-LD, and entries in `sitemap.xml` and `/rss.xml`.
 
+📖 **Full guides:**
+- [docs/AUTHORING.md](docs/AUTHORING.md) — writing posts, adding images, custom
+  OGP preview images, and the per-post SEO checklist.
+- [docs/MEDIUM-IMPORT.md](docs/MEDIUM-IMPORT.md) — import your Medium stories with
+  `npm run import:medium`, including the canonical-URL strategy.
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site

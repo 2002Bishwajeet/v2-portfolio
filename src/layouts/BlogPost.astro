@@ -7,11 +7,16 @@ export interface Props {
   pubDate: Date;
   updatedDate?: Date;
   heroImage?: string;
+  ogImage?: string;
   tags?: string[];
+  canonicalURL?: string;
   slug: string;
 }
 
-const { title, description, pubDate, updatedDate, heroImage, tags = [], slug } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, ogImage, tags = [], canonicalURL: canonicalOverride, slug } = Astro.props;
+
+// Social preview priority: explicit ogImage → in-article hero → site default.
+const socialImage = ogImage ?? heroImage ?? '/og-image.png';
 
 const dateFmt = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
@@ -19,7 +24,8 @@ const dateFmt = new Intl.DateTimeFormat('en-US', {
   day: 'numeric',
 });
 
-const canonicalURL = new URL(`/blog/${slug}/`, Astro.site).href;
+// Self-canonical by default; a frontmatter override points elsewhere (e.g. Medium).
+const canonicalURL = canonicalOverride ?? new URL(`/blog/${slug}/`, Astro.site).href;
 
 // Article structured data → rich results in search + good social unfurls.
 const articleJsonLd = {
@@ -29,7 +35,7 @@ const articleJsonLd = {
   description,
   datePublished: pubDate.toISOString(),
   dateModified: (updatedDate ?? pubDate).toISOString(),
-  ...(heroImage ? { image: new URL(heroImage, Astro.site).href } : {}),
+  image: new URL(socialImage, Astro.site).href,
   keywords: tags.join(', '),
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL },
   author: {
@@ -49,7 +55,7 @@ const articleJsonLd = {
   title={`${title} — Bishwajeet Parhi`}
   description={description}
   type="article"
-  image={heroImage ?? '/og-image.png'}
+  image={socialImage}
   canonicalURL={canonicalURL}
   publishedTime={pubDate.toISOString()}
   modifiedTime={(updatedDate ?? pubDate).toISOString()}
