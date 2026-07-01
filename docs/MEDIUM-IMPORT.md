@@ -50,6 +50,19 @@ Example — import everything including drafts:
 npm run import:medium -- ~/Downloads/medium-export/posts --drafts
 ```
 
+### What the importer recovers automatically
+
+Medium's export is messy; the script handles the tricky parts:
+
+- **GitHub Gist embeds** → fetched via the `gh` CLI and inlined as real, syntax-highlighted code blocks (with the correct language). Requires `gh` to be authenticated (`gh auth status`).
+- **Bare `<pre>` snippets** → converted to proper fenced code blocks.
+- **Medium "mixtape" link previews** → rebuilt as themed link cards (title, description, thumbnail).
+- **Replies/comments** → filtered out via `--min-words` (default 100).
+- **Links Medium wrapped in inline code** → unwrapped so they render as links.
+
+The conversion logic lives in `scripts/lib/medium.mjs` and is covered by unit
+tests — run `npm test`.
+
 ---
 
 ## Step 3 — Review each post

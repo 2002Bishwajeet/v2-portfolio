@@ -529,6 +529,58 @@ footer {
     display: block;
 }
 
+/* Link preview cards (imported from Medium "mixtape" embeds) */
+.prose .link-card {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid var(--brown-darker);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: var(--brown-darkest);
+    transition: border-color 0.2s;
+}
+.prose .link-card:hover { border-color: var(--accent-color); }
+.prose .link-card-thumb {
+    width: 7.5rem;
+    align-self: stretch;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+    border-radius: 0;
+}
+.prose .link-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0.9rem 1.1rem;
+    min-width: 0;
+}
+.prose .link-card-title {
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+}
+.prose .link-card-desc {
+    color: var(--brown-light);
+    font-size: 1.05rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.prose .link-card-host {
+    color: var(--brown-medium);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 .prose hr {
     border: none;
     border-top: 1px solid var(--brown-darker);

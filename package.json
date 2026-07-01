@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "import:medium": "node scripts/import-medium.mjs"
+    "import:medium": "node scripts/import-medium.mjs",
+    "test": "node --test scripts/lib/*.test.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^7.0.0",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "node-html-parser": "^8.0.4",
+    "playwright": "^1.61.1",
     "turndown": "^7.2.4"
   }
 }

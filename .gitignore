@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS / editors
 .DS_Store
+
+# Medium export archives (personal data — never commit)
+medium-export-*
+*.zip
