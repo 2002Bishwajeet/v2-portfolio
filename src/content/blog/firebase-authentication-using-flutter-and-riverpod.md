@@ -5,13 +5,13 @@ pubDate: 2021-08-18
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/firebase-authentication-using-flutter-and-riverpod-f302ab749383"
 ---
-![](/blog/firebase-authentication-using-flutter-and-riverpod/1-d8gsqk073-infpjmprpgnq.png)
+![Flutter, Firebase, and Riverpod logos on a blue gradient background](/blog/firebase-authentication-using-flutter-and-riverpod/1-d8gsqk073-infpjmprpgnq.png)
 
 ### **So you wanna add Firebase Authentication in your Flutter app using Riverpod but didn’t find any good resources!**
 
 This blog will teach you everything about logging users to automatically login users using Riverpod as a State Management.
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/1-ywkorzja1trbcd-8woe-sa.jpg)
+![Meme of a woman captioned about adding Firebase Authentication to a Flutter app using Riverpod](/blog/firebase-authentication-using-flutter-and-riverpod/1-ywkorzja1trbcd-8woe-sa.jpg)
 
 ### What is Riverpod btw?
 
@@ -25,13 +25,13 @@ It’s actually considered a rewrite of [provider](https://github.com/rrousselGi
 
 **To know more about Riverpod and read their Awesome Docs**
 
-<a class="link-card" href="https://pub.dev/packages/flutter_riverpod" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/firebase-authentication-using-flutter-and-riverpod/0-6llquh8ohmsiu-t.png" alt=""><span class="link-card-body"><span class="link-card-title">flutter_riverpod | Flutter Package</span><span class="link-card-desc">A state-management library that: catches programming errors at compile time rather than at runtime removes nesting for…</span><span class="link-card-host">pub.dev</span></span></a>
+<a class="link-card" href="https://pub.dev/packages/flutter_riverpod" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/firebase-authentication-using-flutter-and-riverpod/0-6llquh8ohmsiu-t.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">flutter_riverpod | Flutter Package</span><span class="link-card-desc">A state-management library that: catches programming errors at compile time rather than at runtime removes nesting for…</span><span class="link-card-host">pub.dev</span></span></a>
 
 * * *
 
 ### **Enough Talking Let’s get Started Now**
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/0-7typopiva-e9r8zh.gif)
+![Animated meme captioned "Lets do this" to kick things off](/blog/firebase-authentication-using-flutter-and-riverpod/0-7typopiva-e9r8zh.gif)
 
 **Before Starting make sure you have integrated** [**Firebase**](https://firebase.flutter.dev/docs/overview) **in your Flutter App.**
 
@@ -110,7 +110,7 @@ The comments are pretty self explanatory, nothing fancy done here just initializ
 
 Here [**Loading Screen**](https://github.com/2002Bishwajeet/authentication_riverpod/blob/master/lib/Pages/LoadingScreen.dart) is currently a stateless widget with circular progress indicator in the center and [**Error screen**](https://github.com/2002Bishwajeet/authentication_riverpod/blob/master/lib/Pages/ErrorScreen.dart) prints the errors to the screen.
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/1-5hrkejmlrvkgms8dqsuow.png)
+![VS Code file explorer showing models, Pages, and providers folders in the project](/blog/firebase-authentication-using-flutter-and-riverpod/1-5hrkejmlrvkgms8dqsuow.png)
 
 Before discussing about AuthChecker, let’s create a new file authModel which contains Authentication class.
 
@@ -324,7 +324,7 @@ class AuthChecker extends ConsumerWidget {
 }
 ```
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/0-kghjhpumdw4r2dgb.gif)
+![Animated meme of an excited man cheering and clapping](/blog/firebase-authentication-using-flutter-and-riverpod/0-kghjhpumdw4r2dgb.gif)
 
 So you see , how Riverpod helps write clean code and within few steps you have your Authentication part ready.
 
@@ -336,7 +336,7 @@ Now all it needs to have a beautiful **Login UI** to see if these stuffs works o
 
 We will be creating the following Login UI
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/1-rtquwp4zessdfftmndli7q.png)
+![Two Android screens showing the login and sign-up UI with email, password, and Google buttons](/blog/firebase-authentication-using-flutter-and-riverpod/1-rtquwp4zessdfftmndli7q.png)
 
 > **Nothing Fancy just a basic minimalistic Login UI.**
 
@@ -1062,11 +1062,11 @@ class HomePage extends ConsumerWidget {
 
 ### That’s it you have implemented Flutter Firebase Authentication App using Riverpod.
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/0-ua2cil7g0p643btv.gif)
+![Animated Kermit the Frog cheering "Yaaay" in celebration](/blog/firebase-authentication-using-flutter-and-riverpod/0-ua2cil7g0p643btv.gif)
 
 ### **Let’s see it in Action now**
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/1-isv7ove5w7ofoajb8a-q.gif)
+![The finished Flutter app running on an Android device showing the login screen in action](/blog/firebase-authentication-using-flutter-and-riverpod/1-isv7ove5w7ofoajb8a-q.gif)
 
 -   **So as you can see , everything works great**
 -   **Error Handling works fine though it needs some beautification**
@@ -1075,10 +1075,10 @@ class HomePage extends ConsumerWidget {
 -   **It’s not as Complicated as you think.**
 -   **If you liked it, share it with others. Give clap so that it reaches to more user.**
 
-![](/blog/firebase-authentication-using-flutter-and-riverpod/0-2vsrhho1z5kzymlg.png)
+![Leonardo DiCaprio raising a glass in a congratulatory toast meme](/blog/firebase-authentication-using-flutter-and-riverpod/0-2vsrhho1z5kzymlg.png)
 
 > **To access the full Project, Link to GitHub repo**
 
-<a class="link-card" href="https://github.com/2002Bishwajeet/authentication_riverpod" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/firebase-authentication-using-flutter-and-riverpod/0-p9bdben-lokixpmk.png" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/authentication_riverpod</span><span class="link-card-desc">A new Flutter project. This project is a starting point for a Flutter application. A few resources to get you started…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/2002Bishwajeet/authentication_riverpod" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/firebase-authentication-using-flutter-and-riverpod/0-p9bdben-lokixpmk.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/authentication_riverpod</span><span class="link-card-desc">A new Flutter project. This project is a starting point for a Flutter application. A few resources to get you started…</span><span class="link-card-host">github.com</span></span></a>
 
 **Till Then peace out ✌️**

@@ -5,17 +5,17 @@ pubDate: 2022-01-29
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/building-no-signal-using-flutter-and-appwrite-part-2-565c5eb3b484"
 ---
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-suom-eblovrd8-ti5la6sa.png)
+![Flutter and Appwrite logos joined by a plus sign](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-suom-eblovrd8-ti5la6sa.png)
 
 #### In this part we will be continue making our app No Signal using Flutter and Appwrite. I have already explained about Appwrite and how to use the authentication feature of it.
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-6bim9ux0pexebb7u.jpg)
+![Kid in blue shirt meme captioned Wait A Minute](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-6bim9ux0pexebb7u.jpg)
 
 **You haven’t watched my previous blog ?** Stop Reading this and get back to my [_\[Previous BLOG\]_](https://bishwajeet-techmaster.medium.com/building-no-signal-app-using-flutter-and-appwrite-8b31358b5975)
 
 If you have read my previous blog then…..
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ekwurscrrpheleyz3z5izq.gif)
+![Blurry animated reaction clip filmed in a dim venue](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ekwurscrrpheleyz3z5izq.gif)
 
 **So Let’s get back to finish what we started**
 
@@ -23,7 +23,7 @@ We will start with designing our `create_profile.dart` _page_. When a new user s
 
 ### **We will be creating something like this**
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ikw7irr63fsm5n29bm-wqw.png)
+![No Signal Create Your Profile screen with avatar, name and bio fields](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ikw7irr63fsm5n29bm-wqw.png)
 
 Nothing Fancy UI but this will cover how to access the Database. If you wondering about what Database they use- appwrite uses _MariaDB_ for database storage and queries. More info about the tech-stack can be found [**here**](https://github.com/appwrite/appwrite/blob/master/CONTRIBUTING.md#technology-stack) .
 
@@ -33,7 +33,7 @@ We will also be doing a little bit of error handling incase things go sideways�
 
 To make this screen we would be importing a new package called **_image\_picker_** in our `pubspec.yaml`. We need this package to get an image from our gallery or camera .
 
-<a class="link-card" href="https://pub.dev/packages/image_picker" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-xuqp1g-wnds5snm8.png" alt=""><span class="link-card-body"><span class="link-card-title">image_picker | Flutter Package</span><span class="link-card-desc">A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures with the…</span><span class="link-card-host">pub.dev</span></span></a>
+<a class="link-card" href="https://pub.dev/packages/image_picker" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-xuqp1g-wnds5snm8.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">image_picker | Flutter Package</span><span class="link-card-desc">A Flutter plugin for iOS and Android for picking images from the image library, and taking new pictures with the…</span><span class="link-card-host">pub.dev</span></span></a>
 
 ```
 dependencies:
@@ -458,15 +458,15 @@ To know more about `Storage` `Account` `Database` APIs — all their methods
 
 ### Account
 
-<a class="link-card" href="https://appwrite.io/docs/client/account?sdk=flutter-default" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-4veu8eovkygcju22.png" alt=""><span class="link-card-body"><span class="link-card-title">Account API - Docs - Appwrite</span><span class="link-card-desc">The Account service allows you to authenticate and manage a user account. You can use the account service to update…</span><span class="link-card-host">appwrite.io</span></span></a>
+<a class="link-card" href="https://appwrite.io/docs/client/account?sdk=flutter-default" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-4veu8eovkygcju22.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">Account API - Docs - Appwrite</span><span class="link-card-desc">The Account service allows you to authenticate and manage a user account. You can use the account service to update…</span><span class="link-card-host">appwrite.io</span></span></a>
 
 ### Database
 
-<a class="link-card" href="https://appwrite.io/docs/client/database?sdk=flutter-default" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-fyutyqfwuxs18oix.png" alt=""><span class="link-card-body"><span class="link-card-title">Database API - Docs - Appwrite</span><span class="link-card-desc">The Database service allows you to create structured collections of documents, query and filter lists of documents, and…</span><span class="link-card-host">appwrite.io</span></span></a>
+<a class="link-card" href="https://appwrite.io/docs/client/database?sdk=flutter-default" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-fyutyqfwuxs18oix.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">Database API - Docs - Appwrite</span><span class="link-card-desc">The Database service allows you to create structured collections of documents, query and filter lists of documents, and…</span><span class="link-card-host">appwrite.io</span></span></a>
 
 ### Storage
 
-<a class="link-card" href="https://appwrite.io/docs/client/storage?sdk=flutter-default" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-nhzmkvyndxdhghxt.png" alt=""><span class="link-card-body"><span class="link-card-title">Storage API - Docs - Appwrite</span><span class="link-card-desc">The Storage service allows you to manage your project files. Using the Storage service, you can upload, view, download…</span><span class="link-card-host">appwrite.io</span></span></a>
+<a class="link-card" href="https://appwrite.io/docs/client/storage?sdk=flutter-default" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-nhzmkvyndxdhghxt.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">Storage API - Docs - Appwrite</span><span class="link-card-desc">The Storage service allows you to manage your project files. Using the Storage service, you can upload, view, download…</span><span class="link-card-host">appwrite.io</span></span></a>
 
 Let’s also define `NoSignalUser` class. It’s basically all the relevant info of an user needed inside the **No Signal** app.
 
@@ -594,11 +594,11 @@ We will discuss about `usersListProvider` and `getUsersList` later.
 
 So Looks like we are pretty done, Right?
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-qmouvzcjrqwccd-04xtqqw.jpg)
+![Anakin and Padme meme joking that the UserData model is ready to test](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-qmouvzcjrqwccd-04xtqqw.jpg)
 
 ### **NOT YET!!!**
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-fkufwi93-gpwuwgj.gif)
+![Animated reaction meme captioned Still Got More To Go](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-fkufwi93-gpwuwgj.gif)
 
 We haven’t created a **_collection_** and defined the **_attributes_** _of it in the_ Appwrite Dashboard. Let’s see how to create one
 
@@ -606,7 +606,7 @@ We haven’t created a **_collection_** and defined the **_attributes_** _of it 
 
 Click on Database
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-y13cosctce0wdgi1b49xa.png)
+![Appwrite dashboard with an arrow pointing to the Database menu item](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-y13cosctce0wdgi1b49xa.png)
 
 Appwrite Dashboard
 
@@ -614,7 +614,7 @@ Appwrite Dashboard
 
 Click on Add Collection
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-r7an7llezqybfugfcwwlkg.png)
+![Appwrite Database page highlighting the Add Collection button](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-r7an7llezqybfugfcwwlkg.png)
 
 Appwrite Database Page
 
@@ -622,15 +622,15 @@ Appwrite Database Page
 
 Set a Collection ID and give a collection name to it. Setting a custom collection id is purely optional but it would be better if we give a custom id to it for easier understanding. Ofc, you are free to choose your own name and id here.
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-gwvfaacp9skd2u-zcz0rwq.png)
+![New Collection dialog with users collection ID and Users name](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-gwvfaacp9skd2u-zcz0rwq.png)
 
 And this is something you should get after creating it.
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ii9xen-bur18iej99gsrug.png)
+![Users collection settings page showing permissions options](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ii9xen-bur18iej99gsrug.png)
 
 Now, Let’s head over to _Attribute_ tab to add some attributes to design how our document should actually look like.
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-nteakxg8d5ey6z8-syu2kw.png)
+![Users collection Attributes tab with no attributes yet and Add Attribute button](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-nteakxg8d5ey6z8-syu2kw.png)
 
 Database
 
@@ -648,11 +648,11 @@ Click on **Add Attribute** and add the following attributes
 
 After adding them it should look something like this…..
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-5op72-pl6vi-csdssiyidg.png)
+![Users attributes list: name, bio, imgId, email and id](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-5op72-pl6vi-csdssiyidg.png)
 
 **Let’s test things out now and see if it works or not**
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ksfkyl2oqla9qyoho6xalw.gif)
+![Animated demo of the No Signal sign up screen with email and password fields](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ksfkyl2oqla9qyoho6xalw.gif)
 
 Live Demo of Create Profile
 
@@ -660,7 +660,7 @@ Live Demo of Create Profile
 
 It works. Let’s see how things look at the appwrite dashboard
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-w8gfhfserxm69eopjjc4gg.png)
+![Appwrite Storage page showing the uploaded profile picture file](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-w8gfhfserxm69eopjjc4gg.png)
 
 STORAGE API
 
@@ -668,7 +668,7 @@ We could see an image and it looks like the one we uploaded as our profile pictu
 
 **Let’s check the permissions**
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-sllcuijqv7lw1kado8vzjw.png)
+![Appwrite Update File dialog showing read and write access roles for the image](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-sllcuijqv7lw1kado8vzjw.png)
 
 Image permissions
 
@@ -678,17 +678,17 @@ Our functions for Storage API are working perfectly as expected.
 
 **Let’s look at Users now**
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-pfa9e-dsoxmilaemarvzg.png)
+![Appwrite Users page listing the unverified test user Biswa](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-pfa9e-dsoxmilaemarvzg.png)
 
 Users API
 
 **And Lastly at the Users Collection in Database Tab**
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-gm-d-ekqgjzpnpagi6jx3q.png)
+![Users collection showing one document with name, bio, imgId and email](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-gm-d-ekqgjzpnpagi6jx3q.png)
 
 Users Collection
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-ys5nm14nqmgagao1.gif)
+![Happy baby penguin dancing on the snow](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-ys5nm14nqmgagao1.gif)
 
 Happy Penguin GIF
 
@@ -696,7 +696,7 @@ Everything is working and has been validated in the dashboard too🥳.
 
 But **WAIT!!!!**
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-2lttleto4rjya98x.gif)
+![Cartman meme captioned I feel like something is missing](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-2lttleto4rjya98x.gif)
 
 We are redirected to `home_page.dart` but I haven’t showed you the modified code yet.
 
@@ -868,7 +868,7 @@ Future<void> _init(WidgetRef ref) async {
 
 Replace the `_init` function with the above one. Let’s see what’s changed. At first it fetches the current session. If the user is Logged In, it will return the `User` model which we later need to update to `NoSignalUser` model. Then we change `userLoggedInProvider` state to true.
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-f0vlodfvgcskpcmbm9o-ya.png)
+![No Signal home screen showing the user profile picture in the app bar](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-f0vlodfvgcskpcmbm9o-ya.png)
 
 And that’s how we get a nice little profile picture in the App Bar.
 
@@ -946,7 +946,7 @@ class UsersListPage extends ConsumerWidget {
 
 I have already added some dummy data in the server side itself. Let’s see how it looks
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-u7cx3j-3xeeobk4u-mqkwg.png)
+![No Signal users list showing Aishwarya and Hema entries with bios](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-u7cx3j-3xeeobk4u-mqkwg.png)
 
 **Let’s end this blog here.**
 
@@ -954,11 +954,11 @@ Glad that you made it here till the end. In the next blog, I believe we would fi
 
 If you have any doubts or want to share some feedback in private, here’s my all my active handles in one link 😉.
 
-<a class="link-card" href="https://linktr.ee/2002bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-slpvr02dyvk3xd5e.jpg" alt=""><span class="link-card-body"><span class="link-card-title">Bishwajeet Parhi | Linktree</span><span class="link-card-desc">Open source enthusiast | Flutter Developer | Video Editor | Esports Gamer</span><span class="link-card-host">linktr.ee</span></span></a>
+<a class="link-card" href="https://linktr.ee/2002bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-slpvr02dyvk3xd5e.jpg" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">Bishwajeet Parhi | Linktree</span><span class="link-card-desc">Open source enthusiast | Flutter Developer | Video Editor | Esports Gamer</span><span class="link-card-host">linktr.ee</span></span></a>
 
-![](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-ppkvp6c9xbtvia1f.gif)
+![Terminator wearing sunglasses saying I'll be back](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-ppkvp6c9xbtvia1f.gif)
 
 EDIT:  
 **Checkout Part 3 here**
 
-<a class="link-card" href="https://bishwajeet-parhi.medium.com/building-no-signal-using-flutter-and-appwrite-part-3-90b08db16ec" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-zspcjnppw69mbufybz93xa.png" alt=""><span class="link-card-body"><span class="link-card-title">Building No Signal using Flutter and Appwrite [Part 3]</span><span class="link-card-desc">We are approaching the end game now. The time has come where we will finally discuss about implementing the chat…</span><span class="link-card-host">bishwajeet-parhi.medium.com</span></span></a>
+<a class="link-card" href="https://bishwajeet-parhi.medium.com/building-no-signal-using-flutter-and-appwrite-part-3-90b08db16ec" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-zspcjnppw69mbufybz93xa.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">Building No Signal using Flutter and Appwrite [Part 3]</span><span class="link-card-desc">We are approaching the end game now. The time has come where we will finally discuss about implementing the chat…</span><span class="link-card-host">bishwajeet-parhi.medium.com</span></span></a>

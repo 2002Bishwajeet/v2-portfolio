@@ -127,6 +127,19 @@ paths. It's re-runnable and throttled with backoff (Medium's CDN rate-limits
 bursts — if some images 429, just run it again; already-localized ones are
 skipped).
 
+Then size the link-card thumbnails so each preview renders to its image's real
+shape:
+
+```bash
+npm run style:cards
+```
+
+This measures each localized thumbnail and stamps its `width`/`height` (zero
+layout shift). Square/portrait thumbnails render as a tile beside the text; a
+large landscape preview (an OG/social image) becomes a full-width hero on top.
+It's idempotent — safe to re-run after any import. (`npm run localize:images`
+must run first so the images exist locally.)
+
 Afterwards, consider adding real **alt text** to the `![](…)` images — Medium
 usually leaves it blank, and alt text helps accessibility and SEO. See
 [AUTHORING.md → Adding images](./AUTHORING.md#adding-images).

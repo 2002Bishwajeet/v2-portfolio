@@ -530,12 +530,15 @@ footer {
 }
 
 /* Link preview cards (imported from Medium "mixtape" embeds).
-   Rendering adapts to the amount of preview data available:
-     • with a thumbnail  → rich horizontal card (image + text)
-     • without a thumbnail → compact card with an accent bar (no empty image gap) */
+   Rendering adapts to the preview's shape and content:
+     • square/portrait thumbnail → tile on the left, text beside it (standard)
+     • large landscape thumbnail → full-width hero image on top (link-card--wide)
+     • no thumbnail              → compact card with an accent bar (no image gap)
+   Thumbnail size + the --wide tag are stamped at build time by
+   scripts/style-link-cards.mjs so the card renders to the image's real size. */
 .prose .link-card {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     gap: 0;
     border: 1px solid var(--brown-darker);
     border-radius: 0.5rem;
@@ -548,13 +551,16 @@ footer {
     border-color: var(--accent-color);
     transform: translateY(-2px);
 }
+/* Standard tile: honor the thumbnail's real (square-ish) aspect instead of
+   cropping it into a full-height strip. Stays a tile as the card grows taller. */
 .prose .link-card-thumb {
-    width: 7.5rem;
-    align-self: stretch;
-    object-fit: cover;
+    width: 6.5rem;
+    aspect-ratio: 1 / 1;
     flex-shrink: 0;
-    margin: 0;
-    border-radius: 0;
+    align-self: center;
+    object-fit: cover;
+    margin: 0.75rem 0 0.75rem 0.75rem;
+    border-radius: 0.4rem;
     background-color: var(--brown-darker);
 }
 .prose .link-card-body {
@@ -581,8 +587,8 @@ footer {
     font-size: 1.05rem;
     line-height: 1.4;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -593,6 +599,22 @@ footer {
     letter-spacing: 0.05em;
 }
 
+/* Wide tier: large landscape thumbnail → hero image on top, text below.
+   Tagged link-card--wide at build time (see linkCardVariant in images.mjs). */
+.prose .link-card--wide {
+    flex-direction: column;
+    align-items: stretch;
+}
+.prose .link-card--wide .link-card-thumb {
+    width: 100%;
+    aspect-ratio: auto;
+    height: auto;
+    max-height: 15rem;
+    align-self: stretch;
+    margin: 0;
+    border-radius: 0;
+}
+
 /* Compact tier: no thumbnail available → accent bar instead of an image gap. */
 .prose .link-card:not(:has(.link-card-thumb)) {
     border-left: 3px solid var(--accent-color);
@@ -601,11 +623,10 @@ footer {
     padding: 0.75rem 1rem;
 }
 
-/* Small screens: shrink the thumbnail so text keeps enough room. */
+/* Small screens: shrink the tile so text keeps enough room (wide stays full). */
 @media (max-width: 520px) {
-    .prose .link-card-thumb { width: 5rem; }
+    .prose .link-card:not(.link-card--wide) .link-card-thumb { width: 5rem; }
     .prose .link-card-title { font-size: 1.1rem; }
-    .prose .link-card-desc { -webkit-line-clamp: 3; line-clamp: 3; }
 }
 
 .prose hr {
