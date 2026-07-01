@@ -123,9 +123,14 @@ npm run localize:images
 
 This downloads every Medium-hosted image (inline images **and** link-card
 thumbnails) into `public/blog/<post-slug>/` and rewrites the references to local
-paths. It's re-runnable and throttled with backoff (Medium's CDN rate-limits
-bursts — if some images 429, just run it again; already-localized ones are
-skipped).
+paths. The real format is detected from each file's bytes, so a GIF that Medium
+serves from a `.png` URL is still saved as `.gif` (animated GIFs then play and
+are served with the right type). It's re-runnable and throttled with backoff
+(Medium's CDN rate-limits bursts — if some images 429, just run it again;
+already-localized ones are skipped).
+
+> Imported before this format check existed? Repair any mislabeled files (and
+> their references) in one pass with `npm run fix:extensions`.
 
 Then size the link-card thumbnails so each preview renders to its image's real
 shape:

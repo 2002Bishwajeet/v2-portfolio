@@ -23,6 +23,20 @@ export function extFromContentType(ct = '') {
   return CT_EXT[String(ct).split(';')[0].trim().toLowerCase()] || '';
 }
 
+/**
+ * Detect an image's real format from its magic bytes (Medium sometimes serves a
+ * GIF from a `.png` URL / `image/png` header). Returns 'gif' | 'png' | 'jpg' |
+ * 'webp', or '' if unrecognized. More trustworthy than the URL or Content-Type.
+ */
+export function sniffImageExt(buf) {
+  if (!buf || buf.length < 12) return '';
+  if (buf.toString('ascii', 0, 3) === 'GIF') return 'gif';
+  if (buf.readUInt32BE(0) === 0x89504e47) return 'png';
+  if (buf[0] === 0xff && buf[1] === 0xd8) return 'jpg';
+  if (buf.toString('ascii', 0, 4) === 'RIFF' && buf.toString('ascii', 8, 12) === 'WEBP') return 'webp';
+  return '';
+}
+
 export function sanitizeName(str) {
   return String(str)
     .toLowerCase()
@@ -36,11 +50,13 @@ export function sanitizeName(str) {
  * `used` is a Set of names already taken for the current post (collisions get a
  * short URL hash appended so different source URLs never overwrite each other).
  */
-export function deriveFilename(url, contentType, used = new Set()) {
+export function deriveFilename(url, contentType, used = new Set(), preferredExt = '') {
   const lastSeg = url.split('/').pop().split('?')[0] || '';
   const extMatch = lastSeg.match(/\.(png|jpe?g|gif|webp|svg|avif)$/i);
   const id = extMatch ? lastSeg.slice(0, -extMatch[0].length) : lastSeg;
-  const ext = (extMatch ? extMatch[1].toLowerCase().replace('jpeg', 'jpg') : extFromContentType(contentType)) || 'png';
+  const ext = preferredExt
+    || (extMatch ? extMatch[1].toLowerCase().replace('jpeg', 'jpg') : extFromContentType(contentType))
+    || 'png';
 
   let name = `${sanitizeName(id)}.${ext}`;
   if (used.has(name)) {

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { findMediumImages, extFromContentType, sanitizeName, deriveFilename, imageSize, linkCardVariant, styleLinkCardLine } from './images.mjs';
+import { findMediumImages, extFromContentType, sanitizeName, deriveFilename, imageSize, linkCardVariant, styleLinkCardLine, sniffImageExt } from './images.mjs';
 
 test('findMediumImages finds unique Medium URLs in md and HTML', () => {
   const text = `
@@ -43,6 +43,24 @@ test('deriveFilename disambiguates collisions from different URLs', () => {
   assert.equal(a, '0-mcp.png');
   assert.notEqual(a, b); // second gets a hash suffix
   assert.match(b, /^0-mcp-[0-9a-f]{6}\.png$/);
+});
+
+test('sniffImageExt identifies real format from magic bytes', () => {
+  const gif = Buffer.alloc(12); gif.write('GIF89a', 0, 'ascii');
+  const png = Buffer.alloc(12); png.writeUInt32BE(0x89504e47, 0);
+  const jpg = Buffer.from([0xff, 0xd8, 0xff, 0xe0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  const webp = Buffer.alloc(12); webp.write('RIFF', 0, 'ascii'); webp.write('WEBP', 8, 'ascii');
+  assert.equal(sniffImageExt(gif), 'gif');
+  assert.equal(sniffImageExt(png), 'png');
+  assert.equal(sniffImageExt(jpg), 'jpg');
+  assert.equal(sniffImageExt(webp), 'webp');
+  assert.equal(sniffImageExt(Buffer.from('nope')), '');
+});
+
+test('deriveFilename honors a sniffed extension over URL/content-type', () => {
+  // Medium serves a GIF from a .png URL — the real format should win.
+  const name = deriveFilename('https://cdn-images-1.medium.com/max/800/0*ABC.png', 'image/png', new Set(), 'gif');
+  assert.equal(name, '0-abc.gif');
 });
 
 test('imageSize reads PNG header dimensions', () => {

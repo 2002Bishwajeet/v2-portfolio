@@ -12,7 +12,7 @@
  */
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from 'node:fs';
 import { join, basename } from 'node:path';
-import { findMediumImages, deriveFilename } from './lib/images.mjs';
+import { findMediumImages, deriveFilename, sniffImageExt } from './lib/images.mjs';
 
 const BLOG_DIR = 'src/content/blog';
 const PUBLIC_DIR = 'public/blog';
@@ -59,7 +59,8 @@ for (const file of files) {
     try {
       const res = await fetchImage(url);
       const buf = Buffer.from(await res.arrayBuffer());
-      const name = deriveFilename(url, res.headers.get('content-type'), used);
+      // Trust the bytes, not the URL/header — Medium serves some GIFs as .png.
+      const name = deriveFilename(url, res.headers.get('content-type'), used, sniffImageExt(buf));
       const dest = join(outDir, name);
       if (!existsSync(dest)) writeFileSync(dest, buf);
       const localPath = `/blog/${slug}/${name}`;

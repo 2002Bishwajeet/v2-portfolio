@@ -9,7 +9,7 @@ canonicalURL: "https://medium.com/@bishwajeet-parhi/building-no-signal-using-flu
 
 We are approaching the end game now. The time has come where we will finally discuss about implementing the chat feature in our app.
 
-![Lord of the Rings Theoden captioned "So it begins" meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-pjy3de8egahas5sw.png)
+![Lord of the Rings Theoden captioned "So it begins" meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-pjy3de8egahas5sw.gif)
 
 but before that, let’s talk about our app flow first. We are almost nearing completing our app and we haven’t discussed it yet.
 
@@ -309,11 +309,11 @@ An empty collection with following attributes defined. So yess, so far everythin
 
 **_Time for some gifs spams_**
 
-![Man in a blue shirt doing an excited celebratory dance meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-fo-wf6w1czdt-qbd.png)
+![Man in a blue shirt doing an excited celebratory dance meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-fo-wf6w1czdt-qbd.gif)
 
-![Man in a robe drinking and celebrating on a lavish staircase meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-hihxovard69ret24.png)
+![Man in a robe drinking and celebrating on a lavish staircase meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-hihxovard69ret24.gif)
 
-![Snoop Dogg dancing in a suit celebration meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-09k3q9g2trxp9djs.png)
+![Snoop Dogg dancing in a suit celebration meme](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-09k3q9g2trxp9djs.gif)
 
 * * *
 

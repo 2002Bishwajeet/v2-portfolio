@@ -11,6 +11,7 @@
     "astro": "astro",
     "import:medium": "node scripts/import-medium.mjs",
     "localize:images": "node scripts/localize-images.mjs",
+    "fix:extensions": "node scripts/fix-image-extensions.mjs",
     "style:cards": "node scripts/style-link-cards.mjs",
     "test": "node --test scripts/lib/*.test.mjs"
   },

@@ -41,7 +41,7 @@ Lifecycle of Flame Engine
 
 Let’s learn more about it while we build a game.
 
-![Man in a suit excitedly shouting Game On, a reaction GIF](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-nuu4nigpe-sqr4kb.png)
+![Man in a suit excitedly shouting Game On, a reaction GIF](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-nuu4nigpe-sqr4kb.gif)
 
 ### So, what are gonna build?
 
@@ -230,7 +230,7 @@ Mobile
 
 _Well, I don’t know what to say but it looks_
 
-![Two men chatting, one saying it's freakin awesome, a reaction GIF](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-cxossbq8hmch5oem.png)
+![Two men chatting, one saying it's freakin awesome, a reaction GIF](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-cxossbq8hmch5oem.gif)
 
 ### Now onto adding the player on the screen
 

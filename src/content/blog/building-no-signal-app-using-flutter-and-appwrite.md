@@ -93,7 +93,7 @@ Now just leave it here for a second and let’s create a new [**Flutter Project*
 
 I have seen a lot of people creating a new flutter project using **Terminal**. Following the same tradition let’s make one
 
-![Animated meme of a man pumping his fist saying Let's get it going](/blog/building-no-signal-app-using-flutter-and-appwrite/0-xb-vkauf1duej6gk.png)
+![Animated meme of a man pumping his fist saying Let's get it going](/blog/building-no-signal-app-using-flutter-and-appwrite/0-xb-vkauf1duej6gk.gif)
 
 ### Shoot up the Terminal and run the following commands
 
@@ -180,7 +180,7 @@ Your **App name** can be the same as your project name or it can be different to
 
 Congratulations🎉. You have completed the **first step** of setting up Appwrite and integrating with Flutter
 
-![Animated meme of an excited red Muppet celebrating](/blog/building-no-signal-app-using-flutter-and-appwrite/0-vplurub-v79-kdqq.png)
+![Animated meme of an excited red Muppet celebrating](/blog/building-no-signal-app-using-flutter-and-appwrite/0-vplurub-v79-kdqq.gif)
 
 * * *
 

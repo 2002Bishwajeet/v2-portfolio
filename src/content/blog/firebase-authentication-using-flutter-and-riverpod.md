@@ -1075,7 +1075,7 @@ class HomePage extends ConsumerWidget {
 -   **It’s not as Complicated as you think.**
 -   **If you liked it, share it with others. Give clap so that it reaches to more user.**
 
-![Leonardo DiCaprio raising a glass in a congratulatory toast meme](/blog/firebase-authentication-using-flutter-and-riverpod/0-2vsrhho1z5kzymlg.png)
+![Leonardo DiCaprio raising a glass in a congratulatory toast meme](/blog/firebase-authentication-using-flutter-and-riverpod/0-2vsrhho1z5kzymlg.gif)
 
 > **To access the full Project, Link to GitHub repo**
 
