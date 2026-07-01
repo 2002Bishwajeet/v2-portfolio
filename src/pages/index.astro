@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Bishwajeet Parhi',
+  url: 'https://about.bishwajeetparhi.dev/',
+  image: 'https://about.bishwajeetparhi.dev/headshot.webp',
+  jobTitle: 'Frontend Architect',
+  email: 'mailto:bishwajeet.techmaster@gmail.com',
+  sameAs: [
+    'https://github.com/2002Bishwajeet',
+    'https://www.linkedin.com/in/2002Bishwajeet',
+    'https://x.com/biswa_20p',
+  ],
+};
+---
+
+<BaseLayout
+  title="Bishwajeet Parhi - Frontend Architect"
+  description="4+ years conquering digital dungeons. Specializing in minimal interfaces and robust frontend architectures."
+  jsonLd={personJsonLd}
+>
+  <!-- Main Content -->
+  <main>
+
+    <!-- Left Column: Image -->
+    <div class="avatar-container">
+      <div class="avatar-box">
+        <!-- Avatar Image -->
+        <img src="/headshot.webp" alt="Portrait of Bishwajeet Parhi, Frontend Architect" class="avatar-img" />
+      </div>
+    </div>
+
+    <!-- Right Column: Content -->
+    <div class="content-area">
+      <h1>Bishwajeet Parhi</h1>
+      <h2>Frontend Architect</h2>
+
+      <p class="bio">
+        4+ years conquering digital dungeons. Specializing in minimal interfaces and robust frontend architectures.
+      </p>
+
+      <ul>
+        <li><span class="bullet">●</span>Software architecture and design</li>
+        <li><span class="bullet">●</span>Full-stack Web Development with Bun, Node.js, React, and TypeScript</li>
+        <li><span class="bullet">●</span>Pixel-perfect UI implementation</li>
+        <li><span class="bullet">●</span>Android and iOS apps with React Native, Flutter, and Kotlin Multiplatform</li>
+        <li><span class="bullet">●</span>Cross-platform development on Windows, Linux, and macOS</li>
+        <li><span class="bullet">●</span>Agentic AI Development workflows</li>
+      </ul>
+
+      <div class="contact-text">
+        <p>Contact: <a href="mailto:bishwajeet.techmaster@gmail.com" class="email-link">bishwajeet.techmaster@gmail.com</a></p>
+      </div>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <button onclick="window.open('https://bishwajeetparhi.dev/about', '_blank', 'noopener,noreferrer')" class="resume-btn" aria-label="Open past experiences (opens in a new tab)">
+          Past Experiences
+        </button>
+        <a href="/blog" class="resume-btn" role="button" style="display: inline-flex; align-items: center;">
+          Read the Blog
+        </a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

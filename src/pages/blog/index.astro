@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Newest first; drafts excluded from the public listing.
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const dateFmt = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Bishwajeet Parhi — Blog',
+  url: 'https://about.bishwajeetparhi.dev/blog/',
+  author: { '@type': 'Person', name: 'Bishwajeet Parhi' },
+};
+---
+
+<BaseLayout
+  title="Blog — Bishwajeet Parhi"
+  description="Writing on frontend architecture, cross-platform development, and agentic AI workflows by Bishwajeet Parhi."
+  jsonLd={blogJsonLd}
+>
+  <section class="page">
+    <a href="/" class="nav-link">← HOME</a>
+    <h1 class="page-title">Blog</h1>
+    <p class="page-subtitle">Notes on frontend architecture, cross-platform dev, and building with AI.</p>
+
+    {posts.length === 0 ? (
+      <p class="empty-state">No posts yet — check back soon.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li class="post-list-item">
+            <a href={`/blog/${post.id}/`}>
+              <h2 class="post-list-title">{post.data.title}</h2>
+              <p class="post-list-desc">{post.data.description}</p>
+              <div class="post-meta">
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {dateFmt.format(post.data.pubDate)}
+                </time>
+                {post.data.tags.map((tag) => <span class="tag">{tag}</span>)}
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+</BaseLayout>
