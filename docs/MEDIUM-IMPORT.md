@@ -1,0 +1,127 @@
+# Importing Your Posts from Medium
+
+Move your Medium stories into this site as Markdown, with SEO handled correctly.
+There's a converter script that does the heavy lifting.
+
+- [Step 1 — Export your content from Medium](#step-1--export-your-content-from-medium)
+- [Step 2 — Run the converter](#step-2--run-the-converter)
+- [Step 3 — Review each post](#step-3--review-each-post)
+- [Step 4 — The canonical-URL / SEO decision (important)](#step-4--the-canonical-url--seo-decision-important)
+- [Handling images](#handling-images)
+- [Alternatives](#alternatives-for-a-post-or-two)
+
+---
+
+## Step 1 — Export your content from Medium
+
+1. Go to **Medium → Settings → Security and apps** (or visit
+   <https://medium.com/me/settings/security>).
+2. Find **"Download your information"** and click **Download `.zip`**.
+3. Medium emails you a link (can take a few minutes). Download and unzip it.
+4. Inside you'll find a **`posts/`** folder full of `.html` files — one per story
+   (drafts are prefixed with `draft_`). That folder is what you feed the script.
+
+---
+
+## Step 2 — Run the converter
+
+From the project root:
+
+```bash
+npm install                                   # first time only (installs the converter deps)
+npm run import:medium -- ~/Downloads/medium-export/posts
+```
+
+Point the path at your unzipped `posts/` folder. The script writes one Markdown
+file per story into `src/content/blog/`, with frontmatter (`title`, `description`,
+`pubDate`, `tags`, `canonicalURL`) already filled in from the Medium metadata.
+
+Options:
+
+| Flag                | Effect |
+| ------------------- | ------ |
+| `--drafts`          | Also import Medium drafts (marked `draft: true`, so they stay unpublished). |
+| `--out <dir>`       | Write somewhere other than `src/content/blog`. |
+| `--no-canonical`    | Don't add a `canonicalURL` back to Medium (see Step 4 before using this). |
+
+Example — import everything including drafts:
+
+```bash
+npm run import:medium -- ~/Downloads/medium-export/posts --drafts
+```
+
+---
+
+## Step 3 — Review each post
+
+Medium's exported HTML is messy, so treat the output as a strong first draft:
+
+- Check **code blocks** — verify the language and that nothing got mangled.
+- Check **images** — see [Handling images](#handling-images) below.
+- Fill in any **`pubDate`** the script couldn't detect (it warns you which files).
+- Tidy the **`description`** — Medium subtitles are sometimes empty or too long
+  for a good search snippet (aim for 120–160 chars).
+- Rename the file if you want a cleaner **URL slug**.
+
+Preview locally before publishing:
+
+```bash
+npm run dev     # then open the post under http://localhost:4321/blog/...
+```
+
+---
+
+## Step 4 — The canonical-URL / SEO decision (important)
+
+If the same article lives on both Medium and your site, search engines see
+**duplicate content** and may rank neither well. You have three clean options:
+
+1. **Keep both, credit Medium as the original (safe default).**
+   The script sets `canonicalURL` to the Medium URL automatically. Search engines
+   treat Medium as canonical; your copy won't compete or get penalized. This is
+   the default — do nothing extra.
+
+2. **Make *your site* the canonical (best if you want SEO credit).**
+   Do this **only** if the Medium post also points its canonical at your site.
+   Medium supports this when you *import* a story from an existing URL, or you can
+   unlist/delete the Medium version. Then run the import with `--no-canonical` (or
+   delete the `canonicalURL` line) so your post is self-canonical.
+
+3. **Remove it from Medium entirely**, then use `--no-canonical`. Your site becomes
+   the one true home for the content.
+
+> **Rule of thumb:** if the post stays public on Medium, keep the default
+> (`canonicalURL` → Medium). Only go self-canonical when your site is genuinely
+> the primary home.
+
+See the `canonicalURL` field in [AUTHORING.md](./AUTHORING.md#frontmatter-reference).
+
+---
+
+## Handling images
+
+Medium's export references images by their CDN URL (e.g.
+`https://cdn-images-1.medium.com/...`), so imported posts will pull images from
+Medium's servers. That works immediately, but ties your post to Medium.
+
+For full ownership and best performance/SEO, download each image and host it
+yourself:
+
+1. Save the image into `public/blog/<post-slug>/`.
+2. Replace the CDN URL in the Markdown with the local path, e.g.
+   `![alt text](/blog/my-post/diagram.png)`.
+3. Add real **alt text** while you're there (Medium usually leaves it blank).
+
+See [AUTHORING.md → Adding images](./AUTHORING.md#adding-images).
+
+---
+
+## Alternatives for a post or two
+
+If you only have one or two posts, converting by hand may be faster than exporting
+the whole account:
+
+- Open the Medium post, copy the text, paste into a new `.md` file, and add
+  frontmatter yourself (see [AUTHORING.md](./AUTHORING.md#quick-start)).
+- Medium also exposes an RSS feed at `https://medium.com/feed/@yourusername` — handy
+  for grabbing recent post content/URLs, though it only includes the latest ~10.

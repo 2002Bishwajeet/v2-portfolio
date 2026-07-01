@@ -1,0 +1,85 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: string;
+  ogImage?: string;
+  tags?: string[];
+  canonicalURL?: string;
+  slug: string;
+}
+
+const { title, description, pubDate, updatedDate, heroImage, ogImage, tags = [], canonicalURL: canonicalOverride, slug } = Astro.props;
+
+// Social preview priority: explicit ogImage → in-article hero → site default.
+const socialImage = ogImage ?? heroImage ?? '/og-image.png';
+
+const dateFmt = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Self-canonical by default; a frontmatter override points elsewhere (e.g. Medium).
+const canonicalURL = canonicalOverride ?? new URL(`/blog/${slug}/`, Astro.site).href;
+
+// Article structured data → rich results in search + good social unfurls.
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  image: new URL(socialImage, Astro.site).href,
+  keywords: tags.join(', '),
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL },
+  author: {
+    '@type': 'Person',
+    name: 'Bishwajeet Parhi',
+    url: 'https://about.bishwajeetparhi.dev/',
+  },
+  publisher: {
+    '@type': 'Person',
+    name: 'Bishwajeet Parhi',
+    url: 'https://about.bishwajeetparhi.dev/',
+  },
+};
+---
+
+<BaseLayout
+  title={`${title} — Bishwajeet Parhi`}
+  description={description}
+  type="article"
+  image={socialImage}
+  canonicalURL={canonicalURL}
+  publishedTime={pubDate.toISOString()}
+  modifiedTime={(updatedDate ?? pubDate).toISOString()}
+  jsonLd={articleJsonLd}
+>
+  <article class="page">
+    <a href="/blog" class="nav-link">← BACK TO BLOG</a>
+
+    <header class="article-header">
+      <h1 class="article-title">{title}</h1>
+      <div class="post-meta">
+        <time datetime={pubDate.toISOString()}>{dateFmt.format(pubDate)}</time>
+        {updatedDate && (
+          <span>· Updated {dateFmt.format(updatedDate)}</span>
+        )}
+        {tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+      {heroImage && (
+        <img class="article-hero" src={heroImage} alt={title} loading="eager" />
+      )}
+    </header>
+
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

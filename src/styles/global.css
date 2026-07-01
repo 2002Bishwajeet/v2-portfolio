@@ -9,7 +9,7 @@
     --brown-dark: #453429;
     --brown-darker: #2b2018;
     --brown-darkest: #160f0a;
-    
+
     --font-header: "Press Start 2P", cursive;
     --font-body: "VT323", monospace;
 }
@@ -310,3 +310,222 @@ footer {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.2); }
 }
+
+/* ==========================================================================
+   BLOG STYLES — reuses the same theme variables & pixel fonts as the homepage
+   ========================================================================== */
+
+/* Shared page shell used by the blog listing + article pages so they don't
+   inherit the centered flex layout of the homepage <main>. */
+.page {
+    width: 100%;
+    max-width: 760px;
+    padding: 4.5rem 1.5rem 2rem;
+    flex: 1;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Small pixel-font nav link, e.g. "← BACK" */
+.nav-link {
+    font-family: var(--font-header);
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+}
+.nav-link:hover { color: var(--highlight-color); }
+
+.page-title {
+    font-family: var(--font-header);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--highlight-color);
+    margin: 2rem 0 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--brown-light);
+    margin-bottom: 2.5rem;
+}
+
+/* --- Blog listing --- */
+.post-list { list-style: none; margin: 0; padding: 0; }
+
+.post-list-item {
+    display: block;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--brown-darker);
+    transition: padding-left 0.2s;
+}
+.post-list-item:hover { padding-left: 0.5rem; }
+
+.post-list-item a { display: block; }
+
+.post-list-title {
+    font-family: var(--font-header);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--highlight-color);
+    margin-bottom: 0.6rem;
+    transition: color 0.2s;
+}
+.post-list-item:hover .post-list-title { color: var(--accent-color); }
+
+.post-list-desc {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
+.post-meta {
+    font-size: 1rem;
+    color: var(--brown-medium);
+    letter-spacing: 0.05em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.tag {
+    font-family: var(--font-header);
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    border: 1px solid var(--brown-dark);
+    padding: 0.25rem 0.45rem;
+    border-radius: 0.25rem;
+}
+
+.empty-state {
+    font-size: 1.25rem;
+    color: var(--brown-medium);
+    padding: 2rem 0;
+}
+
+/* --- Article header --- */
+.article-header { margin-bottom: 2.5rem; }
+.article-title {
+    font-family: var(--font-header);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--highlight-color);
+    margin: 1.5rem 0 1rem;
+}
+.article-hero {
+    width: 100%;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+    display: block;
+}
+
+/* --- Article body (rendered markdown) --- */
+.prose {
+    font-size: 1.35rem;
+    line-height: 1.75;
+    color: var(--text-color);
+}
+
+.prose > * + * { margin-top: 1.4rem; }
+
+.prose h2 {
+    font-family: var(--font-header);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--highlight-color);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.prose h3 {
+    font-family: var(--font-header);
+    font-size: 0.75rem;
+    line-height: 1.7;
+    color: var(--accent-color);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.prose a {
+    color: var(--highlight-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+.prose a:hover { color: var(--accent-color); }
+
+.prose ul, .prose ol {
+    list-style: revert;
+    padding-left: 1.5rem;
+    color: var(--text-color);
+    font-size: inherit;
+    margin-bottom: 0;
+}
+.prose li { display: list-item; margin-bottom: 0.4rem; padding-left: 0; }
+
+.prose strong { color: var(--highlight-color); }
+
+.prose blockquote {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1.2rem;
+    color: var(--brown-light);
+    font-style: italic;
+}
+
+.prose code {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    background-color: var(--brown-darkest);
+    color: var(--highlight-color);
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+.prose pre {
+    background-color: var(--brown-darkest) !important;
+    border: 1px solid var(--brown-darker);
+    border-radius: 0.5rem;
+    padding: 1.1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.prose pre code {
+    background: none;
+    padding: 0;
+    font-size: 1rem;
+    color: inherit;
+}
+
+.prose img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.prose hr {
+    border: none;
+    border-top: 1px solid var(--brown-darker);
+    margin: 2.5rem 0;
+}
+
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.15rem;
+}
+.prose th, .prose td {
+    border: 1px solid var(--brown-darker);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+}
+.prose th { color: var(--highlight-color); background-color: var(--brown-darkest); }

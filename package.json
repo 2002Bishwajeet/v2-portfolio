@@ -1,0 +1,24 @@
+{
+  "name": "v2-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "import:medium": "node scripts/import-medium.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.0",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.0.4"
+  },
+  "devDependencies": {
+    "node-html-parser": "^8.0.4",
+    "turndown": "^7.2.4"
+  }
+}
