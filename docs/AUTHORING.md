@@ -8,6 +8,10 @@ can write Markdown, you can publish.
 - [Frontmatter reference](#frontmatter-reference)
 - [Writing the body (Markdown)](#writing-the-body-markdown)
 - [Adding images](#adding-images)
+- [Image captions](#image-captions)
+- [GIFs](#gifs)
+- [Embedding tweets, GIFs & videos](#embedding-tweets-gifs--videos)
+- [Link cards](#link-cards)
 - [Custom social / OGP preview image](#custom-social--ogp-preview-image)
 - [SEO checklist](#seo-checklist-per-post)
 - [Drafts & scheduling](#drafts--scheduling)
@@ -124,6 +128,115 @@ image).
 
 > **Tip:** Keep images reasonably sized (compress before committing; aim for
 > < 300 KB). Large images slow the page, which hurts SEO rankings.
+
+---
+
+## Image captions
+
+To show a caption under an image, add a **title** in quotes after the path —
+`![alt](src "caption")`:
+
+```markdown
+![Signal purple sent bubble reading Yo with a 12:41 PM timestamp](/blog/my-post/bubble.png "Chat bubble in Signal")
+```
+
+At build time a lone captioned image is wrapped in a `<figure>` and the title is
+rendered as a centered, muted `<figcaption>` beneath it. The alt text (for
+accessibility/SEO) and the caption (for readers) are separate — write both.
+
+> This is handled by the `rehypeFigures` plugin in `astro.config.mjs`. It only
+> fires when the image is alone in its paragraph, so keep captioned images on
+> their own line with a blank line above and below.
+
+---
+
+## GIFs
+
+A GIF is just an image — reference it exactly like any other:
+
+```markdown
+![Man gesturing dismissively, a reaction meme](/blog/my-post/reaction.gif)
+```
+
+It animates automatically and is centered like other images. Content images
+(everything except the first/hero image) get `loading="lazy"` and
+`decoding="async"` at build time, which matters for GIFs since they're often
+several MB. For a GIF **hosted on Tenor or Giphy**, prefer their embed widget
+instead — see the next section.
+
+---
+
+## Embedding tweets, GIFs & videos
+
+Astro passes raw HTML in Markdown straight through, so you embed third-party
+content by pasting the provider's official embed code directly into the post.
+Load each provider's `<script>` **once per post** (put them at the very bottom of
+the file). Everything below is centered automatically by the site's styles.
+
+**Before embedding, check the source is still public** — a private or deleted
+tweet/video renders as an error box on your page.
+
+### Tweet / X post
+
+On the tweet, use **••• → Embed post** and copy the code. It looks like:
+
+```html
+<blockquote class="twitter-tweet"><p>…tweet text…</p>&mdash; Name (@handle)
+<a href="https://twitter.com/handle/status/1234567890">date</a></blockquote>
+```
+
+Then, **once at the bottom of the post**:
+
+```html
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+```
+
+The plain blockquote hydrates into the full rich card (avatar, media, likes).
+
+### Tenor GIF
+
+On the GIF, use **Share → Embed** and copy its `<div>`:
+
+```html
+<div class="tenor-gif-embed" data-postid="21179541" data-share-method="host" data-width="100%" data-aspect-ratio="1.5"></div>
+```
+
+Then, **once at the bottom of the post**:
+
+```html
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
+
+### Giphy / YouTube (and other iframes)
+
+Wrap the provider's `<iframe>` in `<div class="video-embed">` for a responsive,
+centered 16:9 frame. For YouTube, use `youtube-nocookie.com` for privacy:
+
+```html
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+```
+
+No extra `<script>` is needed for iframe embeds.
+
+> **Trade-off:** these are third-party widgets styled by the provider, so they
+> won't match the site's theme and add external requests. That's the accepted
+> deal for keeping the real tweet/GIF/video interactive.
+
+---
+
+## Link cards
+
+A "link card" is the themed preview box for an external link (title, description,
+thumbnail) — matching the site's palette. Write it as an `<a class="link-card">`:
+
+```html
+<a class="link-card" href="https://example.com/article" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/my-post/thumb.jpg" alt="Short thumbnail description" width="160" height="160"><span class="link-card-body"><span class="link-card-title">The article title</span><span class="link-card-desc">A one- or two-sentence summary of what's behind the link.</span><span class="link-card-host">example.com</span></span></a>
+```
+
+- The `<img>` is optional — omit it for a text-only card.
+- Stamp the thumbnail's real `width`/`height` to avoid layout shift. If you
+  localized the image, `npm run style:cards` measures and stamps this for you
+  (see [MEDIUM-IMPORT.md](./MEDIUM-IMPORT.md#handling-images)).
 
 ---
 
