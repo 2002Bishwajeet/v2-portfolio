@@ -5,7 +5,7 @@ pubDate: 2021-10-01
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/building-no-signal-app-using-flutter-and-appwrite-8b31358b5975"
 ---
-![](https://cdn-images-1.medium.com/max/800/1*u0VoahmjLQod1XNFJpTpKw.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-u0voahmjlqod1xnfjptpkw.png)
 
 Let’s do Something creative and make a next-level Flutter App. We are going to make **No Signal** — A chatting app inspired by [Signal](https://signal.org/en/). We are going to use **Appwrite** as backend, [**Riverpod**](https://riverpod.dev/) as a State management solution and of course Flutter for creating beautiful apps.
 
@@ -13,7 +13,7 @@ Before Starting,
 
 ### **Appwrite! What is Appwrite?**
 
-![](https://cdn-images-1.medium.com/max/800/1*4FzNVPW8EpCVQQcIbJkyxQ.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-4fznvpw8epcvqqcibjkyxq.png)
 
 Features of Appwrite(Screenshot taken from appwrite.io)
 
@@ -23,7 +23,7 @@ And the Best Part — It’s **Open Source**
 
 **So without a delay Let’s Get Started**
 
-![](https://cdn-images-1.medium.com/max/800/0*micqNMKn1cnR4B16.gif)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/0-micqnmkn1cnr4b16.gif)
 
 ### But Before that let’s set up **Appwrite**
 
@@ -65,7 +65,7 @@ docker run -it --rm ,
 
 When the Installation is completed, run up your Local host. For me it’s [**http://localhost:5000**](http://localhost:5000.) **.** You can set your own custom endpoint too, but that’s something for later to talk about.
 
-![](https://cdn-images-1.medium.com/max/800/1*0tRBDO2nCdGtxBYVQozxKQ.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-0trbdo2ncdgtxbyvqozxkq.png)
 
 Login Page Appwrite
 
@@ -73,7 +73,7 @@ If you see something like this, **CONGO 🎉 ,** you have installed Appwrite on
 
 **Now go ahead and create an account now and log in**
 
-![](https://cdn-images-1.medium.com/max/800/1*MdvtGATBOuM1M9XpZjZJeQ.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-mdvtgatboum1m9xpzjzjeq.png)
 
 You will see something like this. Well not exactly like this — for starters, you would have light mode, no projects and will prompt you to create one but the overall layout will be like this.
 
@@ -81,11 +81,11 @@ You will see something like this. Well not exactly like this — for starter
 
 Click on Create Project. It’s your wish to generate the project ID or set a custom one. Just keep in mind to change it wherever necessary
 
-![](https://cdn-images-1.medium.com/max/800/1*S0Rg7YVHWxOROKXQZcPVhA.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-s0rg7yvhwxorokxqzcpvha.png)
 
 > Of course, you are free to choose your own project name. For memes I am creating **No Signal.**
 
-![](https://cdn-images-1.medium.com/max/800/1*HkQ7OcnGBfHhYWIO2suMKg.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-hkq7ocngbfhhywio2sumkg.png)
 
 After creating a new Project, this is how the dashboard will look like. **Beautiful isn’t it** 😉
 
@@ -93,7 +93,7 @@ Now just leave it here for a second and let’s create a new [**Flutter Project*
 
 I have seen a lot of people creating a new flutter project using **Terminal**. Following the same tradition let’s make one
 
-![](https://cdn-images-1.medium.com/max/800/0*xb-vkAUF1DUEJ6gk)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/0-xb-vkauf1duej6gk.png)
 
 ### Shoot up the Terminal and run the following commands
 
@@ -119,11 +119,11 @@ Don’t forget to **_flutter pub get_ 😉**
 
 To know more about [**Riverpod**](http://riverpod.dev)
 
-<a class="link-card" href="https://pub.dev/packages/flutter_riverpod" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*ps7lcSFhVS1iRy-S" alt=""><span class="link-card-body"><span class="link-card-title">flutter_riverpod | Flutter Package</span><span class="link-card-desc">A state-management library that: catches programming errors at compile time rather than at runtime removes nesting for…</span><span class="link-card-host">pub.dev</span></span></a>
+<a class="link-card" href="https://pub.dev/packages/flutter_riverpod" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-app-using-flutter-and-appwrite/0-ps7lcsfhvs1iry-s.png" alt=""><span class="link-card-body"><span class="link-card-title">flutter_riverpod | Flutter Package</span><span class="link-card-desc">A state-management library that: catches programming errors at compile time rather than at runtime removes nesting for…</span><span class="link-card-host">pub.dev</span></span></a>
 
 ### Fun Fact 🎈
 
-![](https://cdn-images-1.medium.com/max/800/0*TAjkDzWvDhWGZIQ4.jpg)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/0-tajkdzwvdhwgziq4.jpg)
 
 Not only Flutter Appwrite SDK. In fact, all the appwrite SDK for different platforms are made using this [**SDK generator**](https://github.com/appwrite/sdk-generator)**.**
 
@@ -162,37 +162,37 @@ These must be added in order to capture the **Appwrite OAuth callback** **URL.**
 
 We need to add a platform to our project. In this case, it’s Flutter. So click on Add Platform. What you will see is this screen
 
-![](https://cdn-images-1.medium.com/max/800/1*SsqDV5GNeQx7YsIRYo2RLw.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-ssqdv5gneqx7ysiryo2rlw.png)
 
 Register your Flutter App(IOS)
 
 Now we are given 5 choices for each of the different platforms. Since I am going to make an app for android I will switch over to Android Tab. You are free to use any platform you want to develop. To check it out here’s the [link](https://appwrite.io/docs/getting-started-for-flutter)
 
-![](https://cdn-images-1.medium.com/max/800/1*nlro8CZ3H1Z8TwE1OOH79Q.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-nlro8cz3h1z8twe1ooh79q.png)
 
 Register your Flutter App(Android)
 
 It doesn’t expect much just two things. Your **App name** and **Package Name. The package** name can be found under _android/app/build.gradle_
 
-![](https://cdn-images-1.medium.com/max/800/1*6lvdyD42Y401RFNcP4wYVQ.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-6lvdyd42y401rfncp4wyvq.png)
 
 Your **App name** can be the same as your project name or it can be different too. But your **Package Name** must be the same as the **applicationId** given in your **build.gradle** file
 
 Congratulations🎉. You have completed the **first step** of setting up Appwrite and integrating with Flutter
 
-![](https://cdn-images-1.medium.com/max/800/0*VplURUb-v79-KDQq)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/0-vplurub-v79-kdqq.png)
 
 * * *
 
 ### Let’s work on some UI now
 
-![](https://cdn-images-1.medium.com/max/800/1*y1Xmr6daago9bc3LKUtGVg.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-y1xmr6daago9bc3lkutgvg.png)
 
 I thought of giving a brief introduction about the app and so made these screens. Don’t worry these are super easy to make. Here I have used a package called **Introduction Screen** and **Lottie** for adding lottie assets
 
-<a class="link-card" href="https://pub.dev/packages/lottie" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*QB9IOZjxs3vLGZFi" alt=""><span class="link-card-body"><span class="link-card-title">lottie | Flutter Package</span><span class="link-card-desc">Lottie is a mobile library for Android and iOS that parses Adobe After Effects animations exported as json with…</span><span class="link-card-host">pub.dev</span></span></a>
+<a class="link-card" href="https://pub.dev/packages/lottie" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-app-using-flutter-and-appwrite/0-qb9iozjxs3vlgzfi.png" alt=""><span class="link-card-body"><span class="link-card-title">lottie | Flutter Package</span><span class="link-card-desc">Lottie is a mobile library for Android and iOS that parses Adobe After Effects animations exported as json with…</span><span class="link-card-host">pub.dev</span></span></a>
 
-<a class="link-card" href="https://pub.dev/packages/introduction_screen" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*MqZqBj_9jPe-cGNU" alt=""><span class="link-card-body"><span class="link-card-title">introduction_screen | Flutter Package</span><span class="link-card-desc">Introduction screen allow you to have a screen at launcher for example, where you can explain your app. This Widget is…</span><span class="link-card-host">pub.dev</span></span></a>
+<a class="link-card" href="https://pub.dev/packages/introduction_screen" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-app-using-flutter-and-appwrite/0-mqzqbj-9jpe-cgnu.png" alt=""><span class="link-card-body"><span class="link-card-title">introduction_screen | Flutter Package</span><span class="link-card-desc">Introduction screen allow you to have a screen at launcher for example, where you can explain your app. This Widget is…</span><span class="link-card-host">pub.dev</span></span></a>
 
 Just add the dependencies in your `pubspec.yaml` as shown and run `flutter pub get` .
 
@@ -326,7 +326,7 @@ class NoSignalTheme {
 
 Now we have worked on Introduction Screen, how about Login UI now? We will be making something like this
 
-![](https://cdn-images-1.medium.com/max/800/1*MSHMcJy4c4i75HZ1AW1S2A.png)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-mshmcjy4c4i75hz1aw1s2a.png)
 
 In this upcoming gist, I would be implementing Riverpod too. Follow the comments and I am sure you won’t get stuck.
 
@@ -682,7 +682,7 @@ It’s quite long but have patient and the most important thing, don’t get ove
 
 This completes the UI part. If you want a little more explanation about how Riverpod authentication work, read this article by me
 
-<a class="link-card" href="https://bishwajeet-techmaster.medium.com/firebase-authentication-using-flutter-and-riverpod-f302ab749383" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/1*D8GsQk073-INFpjmprPgNQ.png" alt=""><span class="link-card-body"><span class="link-card-title">Firebase Authentication using Flutter and Riverpod</span><span class="link-card-desc">So you wanna add Firebase Authentication in your Flutter app using Riverpod but didn’t find any good resources!</span><span class="link-card-host">bishwajeet-techmaster.medium.com</span></span></a>
+<a class="link-card" href="https://bishwajeet-techmaster.medium.com/firebase-authentication-using-flutter-and-riverpod-f302ab749383" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-app-using-flutter-and-appwrite/1-d8gsqk073-infpjmprpgnq.png" alt=""><span class="link-card-body"><span class="link-card-title">Firebase Authentication using Flutter and Riverpod</span><span class="link-card-desc">So you wanna add Firebase Authentication in your Flutter app using Riverpod but didn’t find any good resources!</span><span class="link-card-host">bishwajeet-techmaster.medium.com</span></span></a>
 
 I have explained a bit more about **Riverpod** here.
 
@@ -1118,11 +1118,11 @@ class AuthChecker extends ConsumerWidget {
 
 **And That’s it We have finally implemented Authentication successfully in our App.**
 
-![](https://cdn-images-1.medium.com/max/800/0*_5hhSJLNv4ZbKKQh.gif)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/0-5hhsjlnv4zbkkqh.gif)
 
 ### Let’s see how it works
 
-![](https://cdn-images-1.medium.com/max/800/1*JiqernNF-mCrvwOFT20JAg.gif)
+![](/blog/building-no-signal-app-using-flutter-and-appwrite/1-jiqernnf-mcrvwoft20jag.gif)
 
 Working App (Authentication)
 

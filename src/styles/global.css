@@ -529,7 +529,10 @@ footer {
     display: block;
 }
 
-/* Link preview cards (imported from Medium "mixtape" embeds) */
+/* Link preview cards (imported from Medium "mixtape" embeds).
+   Rendering adapts to the amount of preview data available:
+     • with a thumbnail  → rich horizontal card (image + text)
+     • without a thumbnail → compact card with an accent bar (no empty image gap) */
 .prose .link-card {
     display: flex;
     align-items: stretch;
@@ -539,9 +542,12 @@ footer {
     overflow: hidden;
     text-decoration: none;
     background-color: var(--brown-darkest);
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, transform 0.2s;
 }
-.prose .link-card:hover { border-color: var(--accent-color); }
+.prose .link-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
 .prose .link-card-thumb {
     width: 7.5rem;
     align-self: stretch;
@@ -549,6 +555,7 @@ footer {
     flex-shrink: 0;
     margin: 0;
     border-radius: 0;
+    background-color: var(--brown-darker);
 }
 .prose .link-card-body {
     display: flex;
@@ -563,6 +570,11 @@ footer {
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .prose .link-card-desc {
     color: var(--brown-light);
@@ -579,6 +591,21 @@ footer {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+/* Compact tier: no thumbnail available → accent bar instead of an image gap. */
+.prose .link-card:not(:has(.link-card-thumb)) {
+    border-left: 3px solid var(--accent-color);
+}
+.prose .link-card:not(:has(.link-card-thumb)) .link-card-body {
+    padding: 0.75rem 1rem;
+}
+
+/* Small screens: shrink the thumbnail so text keeps enough room. */
+@media (max-width: 520px) {
+    .prose .link-card-thumb { width: 5rem; }
+    .prose .link-card-title { font-size: 1.1rem; }
+    .prose .link-card-desc { -webkit-line-clamp: 3; line-clamp: 3; }
 }
 
 .prose hr {

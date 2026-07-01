@@ -113,19 +113,23 @@ See the `canonicalURL` field in [AUTHORING.md](./AUTHORING.md#frontmatter-refere
 
 ## Handling images
 
-Medium's export references images by their CDN URL (e.g.
-`https://cdn-images-1.medium.com/...`), so imported posts will pull images from
-Medium's servers. That works immediately, but ties your post to Medium.
+Right after import, images still point at Medium's CDN (e.g.
+`https://cdn-images-1.medium.com/...`). That works, but ties your posts to Medium.
+Self-host them with one command:
 
-For full ownership and best performance/SEO, download each image and host it
-yourself:
+```bash
+npm run localize:images
+```
 
-1. Save the image into `public/blog/<post-slug>/`.
-2. Replace the CDN URL in the Markdown with the local path, e.g.
-   `![alt text](/blog/my-post/diagram.png)`.
-3. Add real **alt text** while you're there (Medium usually leaves it blank).
+This downloads every Medium-hosted image (inline images **and** link-card
+thumbnails) into `public/blog/<post-slug>/` and rewrites the references to local
+paths. It's re-runnable and throttled with backoff (Medium's CDN rate-limits
+bursts — if some images 429, just run it again; already-localized ones are
+skipped).
 
-See [AUTHORING.md → Adding images](./AUTHORING.md#adding-images).
+Afterwards, consider adding real **alt text** to the `![](…)` images — Medium
+usually leaves it blank, and alt text helps accessibility and SEO. See
+[AUTHORING.md → Adding images](./AUTHORING.md#adding-images).
 
 ---
 

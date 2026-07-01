@@ -5,7 +5,7 @@ pubDate: 2024-08-31
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/i-built-an-auth-template-powered-by-react-native-and-appwrite-4a0b7ee90ba6"
 ---
-![](https://cdn-images-1.medium.com/max/1200/1*xiLL9pAgjKW6RBZMsqvaSw.png)
+![](/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/1-xill9pagjkw6rbzmsqvasw.png)
 
 Ever since appwrite released its React Native SDK, I was a bit curious to try it out to see how easy it is to integrate appwrite into a react native app.
 
@@ -21,7 +21,7 @@ Given the current beta state of the Appwrite React Native SDK, implementing OAut
 
 Fret not 😉, Appwrite provides a method `createOAuth2Token` which appends `userId` and `secret` back to the _success URL_. We use this value to create a session manually
 
-<a class="link-card" href="https://appwrite.io/docs/references/cloud/client-react-native/account" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*48l_QsHSdul6h4YD" alt=""><span class="link-card-body"><span class="link-card-title">Account API Reference - Docs - Appwrite</span><span class="link-card-desc">The Account service allows you to authenticate and manage a user account. You can use the account service to update…</span><span class="link-card-host">appwrite.io</span></span></a>
+<a class="link-card" href="https://appwrite.io/docs/references/cloud/client-react-native/account" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/0-48l-qshsdul6h4yd.png" alt=""><span class="link-card-body"><span class="link-card-title">Account API Reference - Docs - Appwrite</span><span class="link-card-desc">The Account service allows you to authenticate and manage a user account. You can use the account service to update…</span><span class="link-card-host">appwrite.io</span></span></a>
 
 Let’s look at the code snippet in `AuthContext.tsx`
 
@@ -63,7 +63,7 @@ const loginWithOAuth = async (provider: OAuthProvider) => {
 -   `createOAuth2Token` : It takes the provider name (Google, Facebook, Github) and the success URL which is our redirectScheme. This returns a URL that we would use to spawn an in-app browser.
 -   `openAuthSessionSync` : This method is provided by `expo-web-browser` which helps in spawning in-app browser. This method opens up an auth session and once the auth session is complete it waits for redirection. If the redirection scheme matches, it redirects successfully.
 
-<a class="link-card" href="https://docs.expo.dev/versions/latest/sdk/webbrowser/#webbrowseropenauthsessionasyncurl-redirecturl-options" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*-28VNIMlSShsXSxp" alt=""><span class="link-card-body"><span class="link-card-title">WebBrowser</span><span class="link-card-desc">A library that provides access to the system's web browser and supports handling redirects.</span><span class="link-card-host">docs.expo.dev</span></span></a>
+<a class="link-card" href="https://docs.expo.dev/versions/latest/sdk/webbrowser/#webbrowseropenauthsessionasyncurl-redirecturl-options" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/0-28vnimlsshsxsxp.png" alt=""><span class="link-card-body"><span class="link-card-title">WebBrowser</span><span class="link-card-desc">A library that provides access to the system's web browser and supports handling redirects.</span><span class="link-card-host">docs.expo.dev</span></span></a>
 
 The result you get is somewhat like this:
 
@@ -111,7 +111,7 @@ This is one interesting problem that is not limited to React Native but to all m
 
 **Let’s talk about how a forgot password works with the help of a sequence diagram.**
 
-![](https://cdn-images-1.medium.com/max/1200/1*pvfEE7QRwqFZMn6tkoCTXA.png)
+![](/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/1-pvfee7qrwqfzmn6tkoctxa.png)
 
 This seems to be a simple flow but there is one thing that can bug you during developing this and that is **_Redirecting back to your app._**
 
@@ -119,7 +119,7 @@ If you look at the `createRecovery` method, it asks for an `email` and a `url`.
 
 > The URL redirects the user back to your app from the recovery email. Only URLs from hostnames in your project platform list are allowed. This requirement helps to prevent an [open redirect](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) attack against your project API.
 
-<a class="link-card" href="https://appwrite.io/docs/references/cloud/client-react-native/account#createRecovery" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*_OPwMwJaAgiLIwiH" alt=""><span class="link-card-body"><span class="link-card-title">Account API Reference - Docs - Appwrite</span><span class="link-card-desc">The Account service allows you to authenticate and manage a user account. You can use the account service to update…</span><span class="link-card-host">appwrite.io</span></span></a>
+<a class="link-card" href="https://appwrite.io/docs/references/cloud/client-react-native/account#createRecovery" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/0-opwmwjaagiliwih.png" alt=""><span class="link-card-body"><span class="link-card-title">Account API Reference - Docs - Appwrite</span><span class="link-card-desc">The Account service allows you to authenticate and manage a user account. You can use the account service to update…</span><span class="link-card-host">appwrite.io</span></span></a>
 
 Now if you simply send a redirect URL something like this below, it wouldn’t work as it won’t turn into a hyperlink and that adds some pain in the user experience on copying it to a browser (and that too can fail)
 
@@ -240,7 +240,7 @@ Here, `REDIRECT_URL` is the cloud function base URL. For me it was simply this. 
 
 Once you invoke this code, you will get something like this in your email.
 
-![](https://cdn-images-1.medium.com/max/800/1*MVYWvmI8JdCaRCwllreU0A.png)
+![](/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/1-mvywvmi8jdcarcwllreu0a.png)
 
 Sample recovery link in your email
 
@@ -257,4 +257,4 @@ Simply enter your new password and invoke this method passing the appropriate pa
 That’s all for this blog. Hope you learned something✨   
 Just gonna leave the repository link below for you to check out.
 
-<a class="link-card" href="https://git.new/auth-ui" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*sqsYUfbl3hhg-g4_" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/rn-auth-ui: Starter Auth Template powered by Appwrite 🚀</span><span class="link-card-desc">Starter Auth Template powered by Appwrite 🚀. Contribute to 2002Bishwajeet/rn-auth-ui development by creating an…</span><span class="link-card-host">git.new</span></span></a>
+<a class="link-card" href="https://git.new/auth-ui" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/0-sqsyufbl3hhg-g4.png" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/rn-auth-ui: Starter Auth Template powered by Appwrite 🚀</span><span class="link-card-desc">Starter Auth Template powered by Appwrite 🚀. Contribute to 2002Bishwajeet/rn-auth-ui development by creating an…</span><span class="link-card-host">git.new</span></span></a>

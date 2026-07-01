@@ -5,7 +5,7 @@ pubDate: 2021-07-19
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/cppcon-2021-hybrid-c-conference-online-in-person-89fd6534acf7"
 ---
-![](https://cdn-images-1.medium.com/max/1200/0*JzCa3hMKPqz6vI8F.jpeg)
+![](/blog/cppcon-2021-hybrid-c-conference-online-in-person/0-jzca3hmkpqz6vi8f.jpg)
 
 So this year [**CppCon**](http://cppcon.org) is going to held both online and onsite (hybrid) this year on **October 24–29** in **_Aurora Colorado,Usa_**
 
@@ -24,7 +24,7 @@ Also this Year CppCon is introducing a new track : [**Software Design Track**](
 
 ### Seems Amazing isn’t it? So how to attend ?
 
-![](https://cdn-images-1.medium.com/max/800/0*P9tSEtkZSRxZjwfu.jpeg)
+![](/blog/cppcon-2021-hybrid-c-conference-online-in-person/0-p9tsetkzsrxzjwfu.jpg)
 
 You can register as an attendee in the link given below:
 

@@ -5,21 +5,21 @@ pubDate: 2022-05-06
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/building-no-signal-using-flutter-and-appwrite-part-3-90b08db16ec"
 ---
-![](https://cdn-images-1.medium.com/max/800/1*ZspCJnPPw69mBuFybz93xA.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-zspcjnppw69mbufybz93xa.png)
 
 We are approaching the end game now. The time has come where we will finally discuss about implementing the chat feature in our app.
 
-![](https://cdn-images-1.medium.com/max/800/0*PjY3dE8EGAHAS5Sw)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-pjy3de8egahas5sw.png)
 
 but before that, let’s talk about our app flow first. We are almost nearing completing our app and we haven’t discussed it yet.
 
-![](https://cdn-images-1.medium.com/max/800/1*WDK2EMApcMcdhR_qXUmXxA.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-wdk2emapcmcdhr-qxumxxa.png)
 
 That’s the basic flow. Not too complex. Also I believe this can be scalable in future too. For example, if a user signIn but does not have a profile ready we can add a block there without any difficulties.
 
 That being the basic app flow, **Let’s discuss about Chat Architecture now**
 
-![](https://cdn-images-1.medium.com/max/800/1*4FnlvmN52cEMBywCh8ozIQ.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-4fnlvmn52cembywch8oziq.png)
 
 To start chatting, you need to go to _Users List Page_ to get a list of users who uses your app. Next thing is to select a user you want to chat. Now an internal check is added in the function to check if a chat history between them exists or not, if yes you are redirected to Chat page with the old chats. If it doesn’t exists then a new collection is created and then redirected to chat page.
 
@@ -87,17 +87,17 @@ So, Every collection denotes a conversation between 2 users. This blog targets *
 1.  Open up your Appwrite Console
 2.  Go to API Keys
 
-![](https://cdn-images-1.medium.com/max/800/1*6Va7fKX5tALzqfFmXA9i7w.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-6va7fkx5talzqffmxa9i7w.png)
 
 3\. Click Add API Key
 
-![](https://cdn-images-1.medium.com/max/800/1*lszBqpaaBwxEmVsoQnUUmw.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-lszbqpaabwxemvsoqnuumw.png)
 
 4\. Choose a name and select the following scopes.
 
 5\. Click Create
 
-![](https://cdn-images-1.medium.com/max/800/1*FYv2dXkdKvXu62xYzuFIJw.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-fyv2dxkdkvxu62xyzufijw.png)
 
 You should have something like this then. Click on _Show Secret_ and copy the key.
 
@@ -110,7 +110,7 @@ dependencies:
   dart_appwrite: ^3.0.2
 ```
 
-<a class="link-card" href="https://pub.dev/packages/dart_appwrite" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*zlinkz-Uo5dar6XQ" alt=""><span class="link-card-body"><span class="link-card-title">dart_appwrite | Dart Package</span><span class="link-card-desc">This SDK is compatible with Appwrite server version 0.13.x. For older versions, please check previous releases. This is…</span><span class="link-card-host">pub.dev</span></span></a>
+<a class="link-card" href="https://pub.dev/packages/dart_appwrite" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-zlinkz-uo5dar6xq.png" alt=""><span class="link-card-body"><span class="link-card-title">dart_appwrite | Dart Package</span><span class="link-card-desc">This SDK is compatible with Appwrite server version 0.13.x. For older versions, please check previous releases. This is…</span><span class="link-card-host">pub.dev</span></span></a>
 
 Add a new block of code in the file `client.dart` under `providers/` .
 
@@ -260,7 +260,7 @@ Just read the comments between the codes and I am sure you won’t feel overwhel
 
 This deals with creating new Chat collections between 2 users. Now let’s integrate this function in `user_list_page.dart` . We had our UI that looks something like this. Now all we need is to add the functionality when we click a particular user tile.
 
-![](https://cdn-images-1.medium.com/max/800/1*-axKrmddNg1mZ3RHcYibyw.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-axkrmddng1mz3rhcyibyw.png)
 
 **Let’s Add the function**
 
@@ -297,23 +297,23 @@ That’s it, you are half way done in completing your chat app.
 
 **Let’s see how it goes**
 
-![](https://cdn-images-1.medium.com/max/800/1*NvgMPU35wstDdo2eVaow7Q.gif)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-nvgmpu35wstddo2evaow7q.gif)
 
 **Let’s look at the console**
 
-![](https://cdn-images-1.medium.com/max/800/1*YWRKHA0jAApePh4Vbyd4-g.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-ywrkha0jaapeph4vbyd4-g.png)
 
-![](https://cdn-images-1.medium.com/max/800/1*BgFYeEtIHvQtLwnTt2GIKQ.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-bgfyeetihvqtlwntt2gikq.png)
 
 An empty collection with following attributes defined. So yess, so far everything is working now.
 
 **_Time for some gifs spams_**
 
-![](https://cdn-images-1.medium.com/max/800/0*fo_wF6w1cZDt-qBd)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-fo-wf6w1czdt-qbd.png)
 
-![](https://cdn-images-1.medium.com/max/800/0*hiHXoVarD69ret24)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-hihxovard69ret24.png)
 
-![](https://cdn-images-1.medium.com/max/800/0*09k3Q9g2tRxP9dJS)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-09k3q9g2trxp9djs.png)
 
 * * *
 
@@ -474,7 +474,7 @@ dependencies:
 
 **More about this package and how to use it**
 
-<a class="link-card" href="https://pub.dev/packages/flutter_chat_bubble" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*14u0m9OufgafOcUg" alt=""><span class="link-card-body"><span class="link-card-title">flutter_chat_bubble | Flutter Package</span><span class="link-card-desc">Flutter widget for creating different types of chat bubble. You can use different properties of this Widget and create…</span><span class="link-card-host">pub.dev</span></span></a>
+<a class="link-card" href="https://pub.dev/packages/flutter_chat_bubble" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-14u0m9oufgafocug.png" alt=""><span class="link-card-body"><span class="link-card-title">flutter_chat_bubble | Flutter Package</span><span class="link-card-desc">Flutter widget for creating different types of chat bubble. You can use different properties of this Widget and create…</span><span class="link-card-host">pub.dev</span></span></a>
 
 Now there are two new things in this code we need to talk about. One is `StateNotifier` and the other `Realtime` .
 
@@ -494,7 +494,7 @@ Instead of requesting new data via HTTP, the subscription will receive new data 
 
 **To know more about Realtime**
 
-<a class="link-card" href="https://appwrite.io/docs/realtime" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*7S-h0x30qWNCKVdC" alt=""><span class="link-card-body"><span class="link-card-title">Realtime - Docs - Appwrite</span><span class="link-card-desc">Docs Realtime allows you to listen to any events on the server-side in realtime using the subscribe method. Instead of…</span><span class="link-card-host">appwrite.io</span></span></a>
+<a class="link-card" href="https://appwrite.io/docs/realtime" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-7s-h0x30qwnckvdc.png" alt=""><span class="link-card-body"><span class="link-card-title">Realtime - Docs - Appwrite</span><span class="link-card-desc">Docs Realtime allows you to listen to any events on the server-side in realtime using the subscribe method. Instead of…</span><span class="link-card-host">appwrite.io</span></span></a>
 
 Now, let’s create a `StateNotifierProvider` for the chat services which would notify all the changes and invoke build method if data changes.
 
@@ -631,13 +631,13 @@ And that’s it. **We are done!!!**
 
 **Let’s test it live now**
 
-![](https://cdn-images-1.medium.com/max/800/1*U22oi-OHmmP8MSKZiI0buA.gif)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-u22oi-ohmmp8mskzii0bua.gif)
 
 As you can see, we are finally able to talk that too in realtime.
 
 **Let’s look at the collection in the dashboard**
 
-![](https://cdn-images-1.medium.com/max/800/1*Em8amhHfo922xMBshVCNeA.png)
+![](/blog/building-no-signal-using-flutter-and-appwrite-part-3/1-em8amhhfo922xmbshvcnea.png)
 
 Now we can finally say, that this series has been completed successfully.
 
@@ -645,10 +645,10 @@ Thank you so much for being patient and reading my blogs. I didn’t hoped a lot
 
 Here is the complete source code of the project. We haven’t coded the settings screen but that’s something for you to explore and I believe you can understand that code from the repo itself if you get stuck implementing it.
 
-<a class="link-card" href="https://github.com/2002Bishwajeet/no_signal" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*nEarcQ7AzXvo3Myn" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/no_signal: A Chatting Application made using Flutter and Appwrite</span><span class="link-card-desc">A functional replica of (chatting app) made using Flutter and Appwrite. To know more about it - how it was built and…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/2002Bishwajeet/no_signal" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-nearcq7azxvo3myn.png" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/no_signal: A Chatting Application made using Flutter and Appwrite</span><span class="link-card-desc">A functional replica of (chatting app) made using Flutter and Appwrite. To know more about it - how it was built and…</span><span class="link-card-host">github.com</span></span></a>
 
 If you have any queries or just want to connect with me, here are my social handles from where you can reach to me.
 
-<a class="link-card" href="https://linktr.ee/2002bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*mj3_-JuOWq3TnXL4" alt=""><span class="link-card-body"><span class="link-card-title">Bishwajeet Parhi | Linktree</span><span class="link-card-desc">Open Source Enthusiast | Flutter Developer | Video Editor | Pianist</span><span class="link-card-host">linktr.ee</span></span></a>
+<a class="link-card" href="https://linktr.ee/2002bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/building-no-signal-using-flutter-and-appwrite-part-3/0-mj3-juowq3tnxl4.jpg" alt=""><span class="link-card-body"><span class="link-card-title">Bishwajeet Parhi | Linktree</span><span class="link-card-desc">Open Source Enthusiast | Flutter Developer | Video Editor | Pianist</span><span class="link-card-host">linktr.ee</span></span></a>
 
 Till then Stay Tuned ✨

@@ -7,15 +7,15 @@ draft: true
 ---
 Let’s be honest. We all wanted to make a perfect chat bubble like Telegram, WhatsApp, Signal and so on. But getting the pixel-perfect bubble seems a little too challenging right? You make it perfect for text but it lags behind images and video. Sometimes you do not get a pixel-perfect timestamp placement and even if you do, the message does not seem to be in order.
 
-![](https://cdn-images-1.medium.com/max/800/1*rCnSyblLZyMRACVQCFsmEw.gif)
+![](/blog/fluttering-with-chat-bubbles/1-rcnsybllzymracvqcfsmew.gif)
 
 I faced this challenge when I was trying to build the chat bubble as close as possible to the current chat apps we use today. If you notice the chat bubble you will see that the time stamp has a little bit of offset relative to the message. This position changes when the text content is more. So defining this type of layout isn’t normally possible with the standard layout widgets.
 
-![](https://cdn-images-1.medium.com/max/800/1*_iVQNqk3-n3fx25F-1amiw.png)
+![](/blog/fluttering-with-chat-bubbles/1-ivqnqk3-n3fx25f-1amiw.png)
 
 Chat bubble Signal
 
-![](https://cdn-images-1.medium.com/max/800/1*5CNXMBqVsedGa890lcFZOQ.png)
+![](/blog/fluttering-with-chat-bubbles/1-5cnxmbqvsedga890lcfzoq.png)
 
 Chat Bubble Whatsapp
 
@@ -33,7 +33,7 @@ If you like to watch videos and want to know more about RenderObjects, this vide
 
 If you would like to read more about the three trees, this blog would be the best to get you familiarized 😉
 
-<a class="link-card" href="https://medium.com/flutter-community/the-layer-cake-widgets-elements-renderobjects-7644c3142401" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/1*AdNEChcDvZGzaM5pDP9tUA.jpeg" alt=""><span class="link-card-body"><span class="link-card-title">The Layer Cake</span><span class="link-card-desc">How Flutter uses Widgets, Elements and RenderObjects to create delicious eye-candy at 120fps.</span><span class="link-card-host">medium.com</span></span></a>
+<a class="link-card" href="https://medium.com/flutter-community/the-layer-cake-widgets-elements-renderobjects-7644c3142401" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/fluttering-with-chat-bubbles/1-adnechcdvzgzam5pdp9tua.jpg" alt=""><span class="link-card-body"><span class="link-card-title">The Layer Cake</span><span class="link-card-desc">How Flutter uses Widgets, Elements and RenderObjects to create delicious eye-candy at 120fps.</span><span class="link-card-host">medium.com</span></span></a>
 
 **Anyways back to our Solution!**
 

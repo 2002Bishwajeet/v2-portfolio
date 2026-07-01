@@ -5,13 +5,13 @@ pubDate: 2021-07-23
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/github-copilot-my-impressions-thus-far-e93097fbd679"
 ---
-![](https://cdn-images-1.medium.com/max/800/1*w72w9r2ew1saEiXruXeKLQ.gif)
+![](/blog/github-copilot-my-impressions-thus-far/1-w72w9r2ew1saeixruxeklq.gif)
 
 ### **I have been using GitHub CoPilot for last few Weeks and I must say**
 
 > **_This AI will boost your productivity upto 200%_**
 
-![](https://cdn-images-1.medium.com/max/800/1*WPhN3UQAzWe5ESCithQEcg.gif)
+![](/blog/github-copilot-my-impressions-thus-far/1-wphn3uqazwe5escithqecg.gif)
 
 ### So What is GitHub CoPilot ?
 
@@ -30,19 +30,19 @@ Whether it was to fetch data from an api or creating an data Model, CoPilot help
 
 **Let’s Take an Example**
 
-![](https://cdn-images-1.medium.com/max/800/1*fwILMREJrExYR4DShxJDyQ.gif)
+![](/blog/github-copilot-my-impressions-thus-far/1-fwilmrejrexyr4dshxjdyq.gif)
 
 As you can see I wrote a comment on creating a simple function search and replace the given string and how the copilot gave me a solution. It works perfectly and gives you whole block of suggestion in JavaScript.
 
 In C++ , it does not give you whole block of suggestion instead it suggests line by line. The following example here:
 
-![](https://cdn-images-1.medium.com/max/800/1*PVWh00P8gtLDoEeEdWZNYw.gif)
+![](/blog/github-copilot-my-impressions-thus-far/1-pvwh00p8gtldoeeedwznyw.gif)
 
 As you can See , I told CoPilot to create a singly Linked List and you can see what results it . So saves a lot of time and writing the relevant code for you.
 
 For JavaScript Lovers , it will really help you in writing complex Regex functions like Email Validator
 
-![](https://cdn-images-1.medium.com/max/800/1*UpxFUN20kKNDA-DVHjB1uA.gif)
+![](/blog/github-copilot-my-impressions-thus-far/1-upxfun20kknda-dvhjb1ua.gif)
 
 * * *
 
@@ -52,7 +52,7 @@ Even though GitHub CoPilot made me go Wow on the code snippets , it provided so
 
 It produces absolute bizzare code in flutter(dart). It suggests those parameters which does not exists in the following widget
 
-![](https://cdn-images-1.medium.com/max/800/1*RgswH0X3mUYkhGHGEdoizw.gif)
+![](/blog/github-copilot-my-impressions-thus-far/1-rgswh0x3muykhghgedoizw.gif)
 
 Here, I tried to implement an App Drawer in a test App. But it suggested those parameters which never existed in the drawer widget.
 

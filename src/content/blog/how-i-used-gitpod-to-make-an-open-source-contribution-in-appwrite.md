@@ -5,7 +5,7 @@ pubDate: 2022-06-16
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite-9bc1f74ef155"
 ---
-![](https://cdn-images-1.medium.com/max/800/1*JUCzZ4tPUFxhYp1PKs5Uzg.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-juczz4tpufxhyp1pks5uzg.png)
 
 T**hat’s right**. I made an awesome open source contribution in the [**appwrite**](https://github.com/appwrite/appwrite) repository using **Gitpod**. So yes, we are gonna talk about this journey — which type of contribution I did and how Gitpod played an important role here. To be honest this contribution couldn’t be possible without Gitpod in my case here.
 
@@ -21,11 +21,11 @@ Let’s look at the definition on their website:
 
 You may have heard these famous lines
 
-![](https://cdn-images-1.medium.com/max/800/0*fZ-hIyvFydykKnYp.jpg)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-fz-hiyvfydykknyp.jpg)
 
-![](https://cdn-images-1.medium.com/max/800/0*yT_wyumZynycNUCG.jpg)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-yt-wyumzynycnucg.jpg)
 
-![](https://cdn-images-1.medium.com/max/800/0*QO6r7FZRdd_LpJ_M.jpg)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-qo6r7fzrdd-lpj-m.jpg)
 
 Well, _Gitpod solves this as one of the problems_. Ever needed to work on something and just wanted to set up your development environment straight by forking your repository, **Gitpod comes to the rescue.** It spins up fresh container for you with all the dependencies installed and it feels like you are working just on your own machine.
 
@@ -35,7 +35,7 @@ Well, _Gitpod solves this as one of the problems_. Ever needed to work on someth
 
 **To know more about Gitpod**
 
-<a class="link-card" href="https://www.gitpod.io/" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*McPGz1DM9JREAT38" alt=""><span class="link-card-body"><span class="link-card-title">Gitpod: Always ready to code.</span><span class="link-card-desc">Spin up fresh, automated dev environments for each task, in the cloud, in seconds. Open a workspace. Start from any Git…</span><span class="link-card-host">www.gitpod.io</span></span></a>
+<a class="link-card" href="https://www.gitpod.io/" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-mcpgz1dm9jreat38.jpg" alt=""><span class="link-card-body"><span class="link-card-title">Gitpod: Always ready to code.</span><span class="link-card-desc">Spin up fresh, automated dev environments for each task, in the cloud, in seconds. Open a workspace. Start from any Git…</span><span class="link-card-host">www.gitpod.io</span></span></a>
 
 If you want to learn and deep dive into Gitpod, here’s an awesome 12hr video by [**_freecodecamp_**](https://www.freecodecamp.org/news/) **_._**
 
@@ -43,15 +43,15 @@ If you want to learn and deep dive into Gitpod, here’s an awesome 12hr video b
 
 All the source code is publicly available in the GitHub Repository. You can even self-host it in your own infrastructure. But we won’t cover that here, though you are welcome to skim through their docs
 
-<a class="link-card" href="https://github.com/gitpod-io" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*UsPS9aNtazMuI2Yc" alt=""><span class="link-card-body"><span class="link-card-title">Gitpod</span><span class="link-card-desc">Spin up fresh, automated dev environments for each task, in the cloud, in seconds. Gitpod continuously builds your git…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/gitpod-io" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-usps9antazmui2yc.png" alt=""><span class="link-card-body"><span class="link-card-title">Gitpod</span><span class="link-card-desc">Spin up fresh, automated dev environments for each task, in the cloud, in seconds. Gitpod continuously builds your git…</span><span class="link-card-host">github.com</span></span></a>
 
-<a class="link-card" href="https://www.gitpod.io/docs/self-hosted/latest" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*6AtPreNNUtd2xGUF" alt=""><span class="link-card-body"><span class="link-card-title">Gitpod Self-Hosted installation guide</span><span class="link-card-desc">Gitpod can be deployed and operated on your own infrastructure. It supports different cloud providers, self-managed…</span><span class="link-card-host">www.gitpod.io</span></span></a>
+<a class="link-card" href="https://www.gitpod.io/docs/self-hosted/latest" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-6atprennutd2xguf.jpg" alt=""><span class="link-card-body"><span class="link-card-title">Gitpod Self-Hosted installation guide</span><span class="link-card-desc">Gitpod can be deployed and operated on your own infrastructure. It supports different cloud providers, self-managed…</span><span class="link-card-host">www.gitpod.io</span></span></a>
 
 ### Now Let’s talk about Appwrite
 
 I have written a quite a few blogs about appwrite but lemme explain it again for my new readers :
 
-![](https://cdn-images-1.medium.com/max/800/1*Hzj_3Mm5MUrH5JJKkGj5wQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-hzj-3mm5murh5jjkkgj5wq.png)
 
 I am sorry Eldad (someone had to do it xD)
 
@@ -59,19 +59,19 @@ I am sorry Eldad (someone had to do it xD)
 
 **Let’s understand this in the form of a Meme** (I even couldn’t better explain it than this lol)
 
-![](https://cdn-images-1.medium.com/max/800/0*wEEdbWx7rWfmnfYX.jpg)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-weedbwx7rwfmnfyx.jpg)
 
 And, **Appwrite ❤️ Open Source** too
 
 To know more about appwrite
 
-<a class="link-card" href="https://appwrite.io/" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*XwJTxPUjhvnfXBAC" alt=""><span class="link-card-body"><span class="link-card-title">Appwrite - Open-Source End-to-End Backend Server</span><span class="link-card-desc">Appwrite provides web and mobile developers with a set of easy-to-use and integrate REST APIs to manage their core…</span><span class="link-card-host">appwrite.io</span></span></a>
+<a class="link-card" href="https://appwrite.io/" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-xwjtxpujhvnfxbac.png" alt=""><span class="link-card-body"><span class="link-card-title">Appwrite - Open-Source End-to-End Backend Server</span><span class="link-card-desc">Appwrite provides web and mobile developers with a set of easy-to-use and integrate REST APIs to manage their core…</span><span class="link-card-host">appwrite.io</span></span></a>
 
 ### Let’s talk about Contributing
 
 To contribute to appwrite(or in fact in any repository), the first and foremost thing I always recommend is to go through their `readme` docs. Most of the well-maintained maximum activity repos do have a well-maintained readme with proper info about their project, how to install and use it, and some communication channels to have a talk about it.
 
-<a class="link-card" href="https://github.com/appwrite/appwrite" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*kwXxE-kXt9eEl1HY" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - appwrite/appwrite: Secure Backend Server for Web, Mobile &amp; Flutter Developers 🚀 AKA the…</span><span class="link-card-desc">A complete backend solution for your [Flutter / Vue / Angular / React / iOS / Android / *ANY OTHER*] app English | 简体中文…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/appwrite/appwrite" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-kwxxe-kxt9eel1hy.png" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - appwrite/appwrite: Secure Backend Server for Web, Mobile &amp; Flutter Developers 🚀 AKA the…</span><span class="link-card-desc">A complete backend solution for your [Flutter / Vue / Angular / React / iOS / Android / *ANY OTHER*] app English | 简体中文…</span><span class="link-card-host">github.com</span></span></a>
 
 In the end, you may find a section about **Contributing guide** which in fact leads to another [`contributing.md`](https://github.com/appwrite/appwrite/blob/master/CONTRIBUTING.md) docs.
 
@@ -89,7 +89,7 @@ I recently contributed to adding support for **_Dailymotion OAuth provider_** fo
 
 **Read this fun fact before moving to the next part**
 
-![](https://cdn-images-1.medium.com/max/800/0*FheKW_aUBIpZKp6a.jpg)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-fhekw-aubipzkp6a.jpg)
 
 * * *
 
@@ -101,7 +101,7 @@ One of the most important things while adding support for OAuth providers is tha
 
 I chose to work on adding support for the _Soundcloud OAuth_ provider first. I discussed with the appwrite maintainers to work on this feature. Later I found that their APIs does not expose email address after authentication which was needed.
 
-<a class="link-card" href="https://github.com/appwrite/appwrite/issues/3354" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*Jtd2GeSyNKtcznc3" alt=""><span class="link-card-body"><span class="link-card-title">🚀 Feature: Add Soundcloud OAuth Provider · Issue #3354 · appwrite/appwrite</span><span class="link-card-desc">🔖 Feature description Sound is a music streaming app where is lets people discover and enjoy the greatest selection of…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/appwrite/appwrite/issues/3354" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-jtd2gesynktcznc3.png" alt=""><span class="link-card-body"><span class="link-card-title">🚀 Feature: Add Soundcloud OAuth Provider · Issue #3354 · appwrite/appwrite</span><span class="link-card-desc">🔖 Feature description Sound is a music streaming app where is lets people discover and enjoy the greatest selection of…</span><span class="link-card-host">github.com</span></span></a>
 
 **Then I referred to this list which supports OAuth 2 providers**
 
@@ -113,7 +113,7 @@ On doing a bit more research, I found that Dailymotion has support for **_OAuth 
 
 Do you know appwrite provides a guide on how to add support for an OAuth provider?
 
-<a class="link-card" href="https://github.com/appwrite/appwrite/blob/master/docs/tutorials/add-oauth2-provider.md" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*ifjYhITKAP0zIqgI" alt=""><span class="link-card-body"><span class="link-card-title">appwrite/add-oauth2-provider.md at master · appwrite/appwrite</span><span class="link-card-desc">This document is part of the Appwrite contributors' guide. Before you continue reading this document make sure you have…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/appwrite/appwrite/blob/master/docs/tutorials/add-oauth2-provider.md" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-ifjyhitkap0ziqgi.png" alt=""><span class="link-card-body"><span class="link-card-title">appwrite/add-oauth2-provider.md at master · appwrite/appwrite</span><span class="link-card-desc">This document is part of the Appwrite contributors' guide. Before you continue reading this document make sure you have…</span><span class="link-card-host">github.com</span></span></a>
 
 Now to add support for the Dailymotion OAuth provider in appwrite, you need to write the code in [_PHP_](https://www.php.net/) language. Don’t worry if you don’t know PHP. If you have some experience in other programming languages then writing in PHP would be no more difficult. In my case, I didn’t know PHP but was still able to write code without any difficulties.
 
@@ -121,7 +121,7 @@ Now to add support for the Dailymotion OAuth provider in appwrite, you need to w
 
 To run the project, I forked and followed all the necessary guides to set up the development environment in my system. For code autocompletion, I wrote this docker command:
 
-![](https://cdn-images-1.medium.com/max/800/1*m4Ix4y1rGIxUfvGNaYtO_g.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-m4ix4y1rgixufvgnayto-g.png)
 
 Now, after running this command, I had some errors which I ignored though.
 
@@ -139,35 +139,35 @@ But now these days, I don’t get overwhelmed working on something out of my exp
 
 Now if I can’t run on my machine, how would I debug my code then? That’s where Gitpod came to the rescue. Now being a member of **appwrite/contributors,** every member (that includes me too) gets unlimited hours for running Gitpod dev environments. Not just appwrite if you are part of any open source organization (with some conditions ofc) and have a badge at either GitHub or GitLab then you would also have this benefit too.
 
-![](https://cdn-images-1.medium.com/max/800/1*AdBrDx6ypa9AT9ERXAO_9w.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-adbrdx6ypa9at9erxao-9w.png)
 
-![](https://cdn-images-1.medium.com/max/800/1*OCA8yDoQumEJOjIAp5sdNg.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-oca8ydoqumejojiap5sdng.png)
 
 Now let’s talk about running the project in Gitpod. I would recommend downloading and installing this extension. This link contains for both **Firefox** and **chromium-based** browsers.
 
-<a class="link-card" href="https://www.gitpod.io/docs/browser-extension" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*t5sKvOoycNUvlY3_" alt=""><span class="link-card-body"><span class="link-card-title">Browser Extension</span><span class="link-card-desc">Creating a workspace is as easy as prefixing any GitHub URL with gitpod.io/#. For convenience, we developed a Gitpod…</span><span class="link-card-host">www.gitpod.io</span></span></a>
+<a class="link-card" href="https://www.gitpod.io/docs/browser-extension" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-t5skvooycnuvly3.jpg" alt=""><span class="link-card-body"><span class="link-card-title">Browser Extension</span><span class="link-card-desc">Creating a workspace is as easy as prefixing any GitHub URL with gitpod.io/#. For convenience, we developed a Gitpod…</span><span class="link-card-host">www.gitpod.io</span></span></a>
 
 This extension gives you a button to open in Gitpod in the repository
 
-![](https://cdn-images-1.medium.com/max/800/1*i8JBnqKbsqZzEOdfr7C2eA.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-i8jbnqkbsqzzeodfr7c2ea.png)
 
 And click to open in Gitpod, This should give something like this now
 
-![](https://cdn-images-1.medium.com/max/800/1*_3ajmqm8uGK8500jXQckDg.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-3ajmqm8ugk8500jxqckdg.png)
 
-![](https://cdn-images-1.medium.com/max/800/1*4kvJGRoE8sjwUoaKJqOnQg.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-4kvjgroe8sjwuoakjqonqg.png)
 
-![](https://cdn-images-1.medium.com/max/800/1*SbSCPtaMU6ga2ZXBmkjEqQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-sbscptamu6ga2zxbmkjeqq.png)
 
 Now this should give you an option to **Open in VS Code**
 
-![](https://cdn-images-1.medium.com/max/800/1*pVQ2EA1CMY1R9UTBcoMtmw.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-pvq2ea1cmy1r9utbcomtmw.png)
 
 What I do is open VS Code in Browser as well as in Desktop. I need them later.
 
 That’s it everything has been set up just normally as you would be set up in my machine ✨
 
-![](https://cdn-images-1.medium.com/max/800/0*tSG95S2bE46pd8r7.jpg)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-tsg95s2be46pd8r7.jpg)
 
 ### Now Let’s start working on adding Dailymotion Provider
 
@@ -181,17 +181,17 @@ The next thing I did was read the `contribution.md` guide. The first thing neede
 
 **Add this in** `app/config/providers.php`
 
-![](https://cdn-images-1.medium.com/max/800/1*YjiN_EZTYU2aT4MMe3zRVQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-yjin-eztyu2at4mme3zrvq.png)
 
 I needed to make sure, I was adding them in alphabetical order as mentioned in the guide. For icon, I just googled Dailymotion icon, found an `.ai` (Adobe Illustrator) file, exported `100x100` png file and uploaded in `public/images/users` . The file name should be saved as the name of the provider in all lowercase. You only need to add `icon` prefix in the code only. It was something like this.
 
-![](https://cdn-images-1.medium.com/max/800/0*nm8gCv795xffxJk-)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-nm8gcv795xffxjk.png)
 
 dailymotion.png
 
 The next thing was to add the provider class. I created a new file `Dailymotion.php` in `src/Appwrite/Auth/OAuth2/` . All the file names here should be [_Pascal case_](https://stackoverflow.com/questions/41768733/camel-case-and-pascal-case-mistake/41769355#41769355)_. I copied the boilerplate code and pasted into my file._
 
-![](https://cdn-images-1.medium.com/max/800/1*qff4j6Updys4gh8pv4NN6A.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-qff4j6updys4gh8pv4nn6a.png)
 
 Now it was time to complete all the **Todos** and replace them with the actual values in all the variables.
 
@@ -468,11 +468,11 @@ Oh yeah, Now this is the time you would need to use VS Code in the browser to ac
 
 Go to Users -> Settings
 
-![](https://cdn-images-1.medium.com/max/800/1*9iJR7HUBGNUrOD2xjZWoSQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-9ijr7hubgnurod2xjzwosq.png)
 
 Scroll down and you should see **Dailymotion Provider** listed.
 
-![](https://cdn-images-1.medium.com/max/800/1*Dj091ck3kMlfLCWsno0eaw.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-dj091ck3kmlflcwsno0eaw.png)
 
 If you didn’t find it (it happened with me), this is what I did
 
@@ -486,7 +486,7 @@ And it started working again.
 
 #### Now Let’s test it,
 
-![](https://cdn-images-1.medium.com/max/800/1*IVOrXW2tSFdUYIxgeO6_Zw.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-ivorxw2tsfduyixgeo6-zw.png)
 
 We need **App Id** and **App Secret** here now. For this, you need to create a Dailymotion developer account
 
@@ -496,43 +496,43 @@ Refer to this Docs for creating a developer account
 
 After you have been redirected to your partner HQ — go to settings API Keys
 
-![](https://cdn-images-1.medium.com/max/800/1*S14J3i86ACnmsuPEfAPXxQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-s14j3i86acnmsupefapxxq.png)
 
 After that create a new API key
 
-![](https://cdn-images-1.medium.com/max/800/1*UNMsHOqLFYdA63SFNggohw.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-unmshoqlfyda63sfnggohw.png)
 
 Make sure to keep the project name the same as the one you used in Appwrite
 
-![](https://cdn-images-1.medium.com/max/800/1*0abPHHe0-jv-vZRsD5BKTA.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-0abphhe0-jv-vzrsd5bkta.png)
 
 Paste the callback URL here and click create.
 
-![](https://cdn-images-1.medium.com/max/800/1*v7MVFBvdJIc0E-FWGw0FOQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-v7mvfbvdjic0e-fwgw0foq.png)
 
 Now you have your **API Key** and **API secret** here, paste them in the Dailymotion OAuth 2 settings.
 
-![](https://cdn-images-1.medium.com/max/800/1*lCYYgDQ9H-yJTDBQXpaoiQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-lcyygdq9h-yjtdbqxpaoiq.png)
 
 **Click Update and Voila**, the setup has been done on the server-side. Now All I need is to test it on the Client side.
 
 For testing this, I made a small basic app for testing it. Here’s the repo below.
 
-<a class="link-card" href="https://github.com/2002Bishwajeet/authentication_riverpod/tree/appwrite-authentication" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*IO9yTwUlQz2O5dt9" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/authentication_riverpod at appwrite-authentication</span><span class="link-card-desc">This repo contains a sample Flutter application that demonstrates the use of Firebase authentication to a Flutter app…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/2002Bishwajeet/authentication_riverpod/tree/appwrite-authentication" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-io9ytwulqz2o5dt9.jpg" alt=""><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/authentication_riverpod at appwrite-authentication</span><span class="link-card-desc">This repo contains a sample Flutter application that demonstrates the use of Firebase authentication to a Flutter app…</span><span class="link-card-host">github.com</span></span></a>
 
 Well, this was initially a template for Firebase Riverpod Authentication in Flutter, I modified it a bit and add a template for appwrite-authentication too.
 
 The only thing you need to change is in the `client.dart` file.
 
-![](https://cdn-images-1.medium.com/max/800/1*SOEkgtwvo4y78kNBddgpBQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-soekgtwvo4y78knbddgpbq.png)
 
 ### Time to run my app
 
-![](https://cdn-images-1.medium.com/max/800/1*n9KPwqPnAPX68waJExQ9VQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-n9kpwqpnapx68wajexq9vq.png)
 
-![](https://cdn-images-1.medium.com/max/800/1*umzIx9GPX09_Bw8reI3UaQ.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-umzix9gpx09-bw8rei3uaq.png)
 
-![](https://cdn-images-1.medium.com/max/800/1*517_bAzk4bGkov6hgOO4Eg.png)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-517-bazk4bgkov6hgoo4eg.png)
 
 #### Voila 🥳
 
@@ -544,18 +544,18 @@ docker compose logs appwrite
 
 If you aren’t able to figure out what went wrong, you can always ask for help in the appwrite discord server(that’s what I did). When all the bugs are gone, now all is left to create a PR for the same.
 
-<a class="link-card" href="https://github.com/appwrite/appwrite/pull/3371" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*UYDUd5ArNGn0qRZx" alt=""><span class="link-card-body"><span class="link-card-title">Feat: Add Dailymotion OAuth provider by 2002Bishwajeet · Pull Request #3371 · appwrite/appwrite</span><span class="link-card-desc">Add this suggestion to a batch that can be applied as a single commit. This suggestion is invalid because no changes…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/appwrite/appwrite/pull/3371" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-uydud5arngn0qrzx.png" alt=""><span class="link-card-body"><span class="link-card-title">Feat: Add Dailymotion OAuth provider by 2002Bishwajeet · Pull Request #3371 · appwrite/appwrite</span><span class="link-card-desc">Add this suggestion to a batch that can be applied as a single commit. This suggestion is invalid because no changes…</span><span class="link-card-host">github.com</span></span></a>
 
 You can have a look at it. You would notice, that I left some comments for the maintainers for the extra variable function I created for easy review. Then I left some screenshots demonstrating that it works perfectly. After reviewing, they suggested some changes, which I quickly worked on them. After 2 days of extensive review and suggestions, **My PR got merged ✨🥳.**
 
-![](https://cdn-images-1.medium.com/max/800/0*Y5uzJ5KoIXBuyiCn.jpg)
+![](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-y5uzj5koixbuyicn.jpg)
 
 **Thanks a lot for reading till the end.** I hope you definitely gained some knowledge and values by reading this.
 
 Recently my GitHub sponsors badge went live. If you like my blogs and want to support me, here’s the link for that
 
-<a class="link-card" href="https://github.com/sponsors/2002Bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*OTe5UT3O4koZ6Dxb" alt=""><span class="link-card-body"><span class="link-card-title">Sponsor @2002Bishwajeet on GitHub Sponsors</span><span class="link-card-desc">1 sponsor is funding 2002Bishwajeet's work. @2002Bishwajeet's goal is to earn $50 per month This would help to write…</span><span class="link-card-host">github.com</span></span></a>
+<a class="link-card" href="https://github.com/sponsors/2002Bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-ote5ut3o4koz6dxb.jpg" alt=""><span class="link-card-body"><span class="link-card-title">Sponsor @2002Bishwajeet on GitHub Sponsors</span><span class="link-card-desc">1 sponsor is funding 2002Bishwajeet's work. @2002Bishwajeet's goal is to earn $50 per month This would help to write…</span><span class="link-card-host">github.com</span></span></a>
 
 As always you can reach me out on the following handles
 
-<a class="link-card" href="https://linktr.ee/2002bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="https://cdn-images-1.medium.com/fit/c/160/160/0*M8D9TxMlZfUR6m2K" alt=""><span class="link-card-body"><span class="link-card-title">Bishwajeet Parhi | Linktree</span><span class="link-card-desc">Open Source Enthusiast | Flutter Developer | Video Editor | Pianist</span><span class="link-card-host">linktr.ee</span></span></a>
+<a class="link-card" href="https://linktr.ee/2002bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-m8d9txmlzfur6m2k.jpg" alt=""><span class="link-card-body"><span class="link-card-title">Bishwajeet Parhi | Linktree</span><span class="link-card-desc">Open Source Enthusiast | Flutter Developer | Video Editor | Pianist</span><span class="link-card-host">linktr.ee</span></span></a>
