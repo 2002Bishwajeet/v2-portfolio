@@ -149,6 +149,36 @@ Afterwards, consider adding real **alt text** to the `![](…)` images — Mediu
 usually leaves it blank, and alt text helps accessibility and SEO. See
 [AUTHORING.md → Adding images](./AUTHORING.md#adding-images).
 
+### Restoring image captions
+
+Medium stores image captions as `<figcaption>`, which the converter drops. Bring
+them back from the export:
+
+```bash
+npm run restore:captions -- ~/Downloads/medium-export/posts
+```
+
+This matches each captioned image to its localized file and writes the caption as
+the Markdown image **title** — `![alt](src "caption")` — which renders as a
+centered `<figcaption>` under the image. Idempotent.
+
+### Embeds (tweets, Tenor/Giphy GIFs, YouTube)
+
+Medium exports tweets, Tenor/Giphy GIFs and YouTube videos as `<iframe>` embeds,
+which the HTML→Markdown converter drops. Re-add them by hand where you want them,
+pasting the provider's official embed code straight into the Markdown (Astro
+preserves the `<blockquote>`/`<div>`/`<iframe>` and their `<script>`):
+
+- **Tweet** — the X "Embed post" `<blockquote class="twitter-tweet">…</blockquote>`
+  plus one `<script async src="https://platform.x.com/widgets.js">`.
+- **Tenor** — `<div class="tenor-gif-embed" data-postid="…" data-width="100%">`
+  plus one `<script async src="https://tenor.com/embed.js">`.
+- **Giphy / YouTube** — wrap the iframe in `<div class="video-embed">…</div>` for
+  a responsive, centered 16:9 frame (use `youtube-nocookie.com` for privacy).
+
+Load each provider's `<script>` once per post. Check first that the source video
+/ tweet is still public — a private or deleted embed renders as an error box.
+
 ---
 
 ## Alternatives for a post or two

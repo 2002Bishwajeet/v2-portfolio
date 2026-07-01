@@ -11,6 +11,8 @@ Ever since appwrite released its React Native SDK, I was a bit curious to try it
 
 Well, a few weeks ago, I launched an Auth Template for developers by a friendly neighbourhood developer 😉. In short, it's a readymade auth template that can be used in your next project.
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Introducing React Native Auth UI powered by <a href="https://x.com/appwrite?ref_src=twsrc%5Etfw">@appwrite</a> 🚀<br><br>Features:<br>1. Supports OAuth2, Email signIn,signup<br>2. Supports Forget and Reset Password<br>3. Uses file-based routing using Expo-router<br>4. 60FPS+ smooth animation<br><br>Checkout the src code here: <a href="https://t.co/adO7QnCw1V">https://t.co/adO7QnCw1V</a><br><br>Use… <a href="https://t.co/JFeukHR4MV">pic.twitter.com/JFeukHR4MV</a></p>&mdash; Bishwajeet Parhi (@biswa_20p) <a href="https://x.com/biswa_20p/status/1824746570505474519?ref_src=twsrc%5Etfw">August 17, 2024</a></blockquote>
+
 In this blog, I am not gonna talk about how I built it but I will be talking about the challenges I faced while integrating appwrite and how I tackled them 😉
 
 ### OAuth2
@@ -18,6 +20,8 @@ In this blog, I am not gonna talk about how I built it but I will be talking abo
 Given the current beta state of the Appwrite React Native SDK, implementing OAuth2 isn’t as straightforward as it is for Flutter. You need to handle the `deeplinking` manually passing the `success` and `failed` URL to the method.
 
 > Also `createOAuth2Session` won’t work as the cookies aren’t shared between the app and InApp browser when redirected.
+
+<div class="tenor-gif-embed" data-postid="21179541" data-share-method="host" data-width="100%" data-aspect-ratio="1.5"></div>
 
 Fret not 😉, Appwrite provides a method `createOAuth2Token` which appends `userId` and `secret` back to the _success URL_. We use this value to create a session manually
 
@@ -131,6 +135,8 @@ One solution could be to create a deeplinking to your app. That should work but 
 
 Another solution might be to create a simple webpage that handles the password reset. You simply pass the website url to the method and that should do the work for you. But again, That is not a good user experience. I want the recovery to happen completely on the app side.
 
+<div class="tenor-gif-embed" data-postid="22176525" data-share-method="host" data-width="100%" data-aspect-ratio="1.5"></div>
+
 #### The Mentos Approach 🚀
 
 I wrote a cloud function that acts as a redirector back to your app. Ofc, I need to take care of the security and handle unauthorized app scheme redirects. I also took care of bad or missing data as well. Once all data is validated, the cloud function redirects back to your app with the value.
@@ -240,7 +246,7 @@ Here, `REDIRECT_URL` is the cloud function base URL. For me it was simply this. 
 
 Once you invoke this code, you will get something like this in your email.
 
-![Password reset email with a recovery link containing secret and userId parameters](/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/1-mvywvmi8jdcarcwllreu0a.png)
+![Password reset email with a recovery link containing secret and userId parameters](/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/1-mvywvmi8jdcarcwllreu0a.png "Sample recovery link in your email")
 
 Sample recovery link in your email
 
@@ -254,7 +260,14 @@ const confirmRecovery = async (userId: string, secret: string, password: string)
 
 Simply enter your new password and invoke this method passing the appropriate parameters. That should update your password and redirect you to the login page.
 
+<div class="tenor-gif-embed" data-postid="16917227" data-share-method="host" data-width="100%" data-aspect-ratio="1.5"></div>
+
 That’s all for this blog. Hope you learned something✨   
 Just gonna leave the repository link below for you to check out.
 
 <a class="link-card" href="https://git.new/auth-ui" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/i-built-an-auth-template-powered-by-react-native-and-appwrite/0-sqsyufbl3hhg-g4.png" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">GitHub - 2002Bishwajeet/rn-auth-ui: Starter Auth Template powered by Appwrite 🚀</span><span class="link-card-desc">Starter Auth Template powered by Appwrite 🚀. Contribute to 2002Bishwajeet/rn-auth-ui development by creating an…</span><span class="link-card-host">git.new</span></span></a>
+
+<div class="tenor-gif-embed" data-postid="14227942975904398337" data-share-method="host" data-width="100%" data-aspect-ratio="1.5"></div>
+
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>

@@ -5,13 +5,13 @@ pubDate: 2022-07-10
 tags: []
 canonicalURL: "https://medium.com/@bishwajeet-parhi/can-we-build-a-cross-platform-game-using-flutter-and-flame-3132db7c74d6"
 ---
-![Flutter and Flame logos joined by a red plus sign](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-duvv6iutaue7kyz-zcatsg.png)
+![Flutter and Flame logos joined by a red plus sign](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-duvv6iutaue7kyz-zcatsg.png "Flutter and Flame logo")
 
 Flutter and Flame logo
 
 With the announcement of [_Flutter 2.8_](https://medium.com/flutter/announcing-flutter-2-8-31d2cb7e19f5)_, the_ **Flame engine** also rolled out a stable **1.0.0** version.
 
-![Flutter 2.8 release announcement art over a 3D low-poly landscape](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-9jweeqcqqylorl8z.png)
+![Flutter 2.8 release announcement art over a 3D low-poly landscape](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-9jweeqcqqylorl8z.png "flutter 2.8 reveal")
 
 flutter 2.8 reveal
 
@@ -23,7 +23,7 @@ flutter 2.8 reveal
 
 > It provides you with a simple yet effective game loop implementation, and the necessary functionalities that you might need in a game. For instance; input, images, sprites, sprite sheets, animations, collision detection and a component system that we call Flame Component System (FCS for short).
 
-![Flame engine homepage with its flame logo and Get Started button](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-1nuug4pk5nnfj8kltujzsg.png)
+![Flame engine homepage with its flame logo and Get Started button](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-1nuug4pk5nnfj8kltujzsg.png "flame homepage")
 
 flame homepage
 
@@ -35,7 +35,7 @@ So, if creating games in Flutter is possible, **_why not create one?_** The idea
 
 In Flutter, everything is a widget, similarly, in Flame engine, everything is a component. The below image shows the basic lifecycle of how the game engine runs.
 
-![Flame component lifecycle diagram: onGameResize, onLoad, onMount, update, render, onRemove](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-yjjga3di607w4sj7.png)
+![Flame component lifecycle diagram: onGameResize, onLoad, onMount, update, render, onRemove](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/0-yjjga3di607w4sj7.png "Lifecycle of Flame Engine")
 
 Lifecycle of Flame Engine
 
@@ -47,7 +47,7 @@ Let’s learn more about it while we build a game.
 
 I was thinking of making an arcade/action-type game. The idea is we have a player with a weapon, we have a 2D map — ground, some floating grounds, and kinds of stuff. There would be enemies( currently 3 types) — waves of enemies and the goal is to eliminate all of them. The number of enemies would increase with each wave passing and it will go on until his health runs out. Thus we will then calculate his score. Since I was thinking of a cross-platform game, we would be having a high score board too. This was some sort of rough diagram I made 😂.
 
-![Hand-drawn sketch planning the player, enemy types, waves and floating platforms](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-4jq-rkicabg8dl0wgo2zdg.png)
+![Hand-drawn sketch planning the player, enemy types, waves and floating platforms](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-4jq-rkicabg8dl0wgo2zdg.png "Something I thought of making with my brother")
 
 Something I thought of making with my brother
 
@@ -216,15 +216,15 @@ Then `ParallaxComponent` has a `Parallax` object. We used the setter and added a
 
 I will show you the outputs from 3 Platforms (Windows, Android, and web)
 
-![Mini Wars main menu running on Windows with a scrolling parallax background](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-xhsjjrvi3ovndjtivxwu7w.gif)
+![Mini Wars main menu running on Windows with a scrolling parallax background](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-xhsjjrvi3ovndjtivxwu7w.gif "Windows")
 
 Windows
 
-![Mini Wars main menu running in a browser with a scrolling parallax background](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-dykfjonqgfm-7qc76fqlhg.gif)
+![Mini Wars main menu running in a browser with a scrolling parallax background](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-dykfjonqgfm-7qc76fqlhg.gif "Web")
 
 Web
 
-![Mini Wars main menu running on an Android phone in landscape](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-ryw-dq2pe-g3gi5lpdk0vw.gif)
+![Mini Wars main menu running on an Android phone in landscape](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-ryw-dq2pe-g3gi5lpdk0vw.gif "Mobile")
 
 Mobile
 
@@ -410,7 +410,7 @@ final Player hero = Player();
 
 ### Live Time
 
-![Animated player character standing on the ground in the parallax game scene](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-5a-vo9guo12zo553ob0f4g.gif)
+![Animated player character standing on the ground in the parallax game scene](/blog/can-we-build-a-cross-platform-game-using-flutter-and-flame/1-5a-vo9guo12zo553ob0f4g.gif "Sprite Animation")
 
 Sprite Animation
 

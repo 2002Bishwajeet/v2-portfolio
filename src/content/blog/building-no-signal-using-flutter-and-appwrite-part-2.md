@@ -606,7 +606,7 @@ We haven’t created a **_collection_** and defined the **_attributes_** _of it 
 
 Click on Database
 
-![Appwrite dashboard with an arrow pointing to the Database menu item](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-y13cosctce0wdgi1b49xa.png)
+![Appwrite dashboard with an arrow pointing to the Database menu item](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-y13cosctce0wdgi1b49xa.png "Appwrite Dashboard")
 
 Appwrite Dashboard
 
@@ -614,7 +614,7 @@ Appwrite Dashboard
 
 Click on Add Collection
 
-![Appwrite Database page highlighting the Add Collection button](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-r7an7llezqybfugfcwwlkg.png)
+![Appwrite Database page highlighting the Add Collection button](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-r7an7llezqybfugfcwwlkg.png "Appwrite Database Page")
 
 Appwrite Database Page
 
@@ -630,7 +630,7 @@ And this is something you should get after creating it.
 
 Now, Let’s head over to _Attribute_ tab to add some attributes to design how our document should actually look like.
 
-![Users collection Attributes tab with no attributes yet and Add Attribute button](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-nteakxg8d5ey6z8-syu2kw.png)
+![Users collection Attributes tab with no attributes yet and Add Attribute button](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-nteakxg8d5ey6z8-syu2kw.png "Database")
 
 Database
 
@@ -652,7 +652,7 @@ After adding them it should look something like this…..
 
 **Let’s test things out now and see if it works or not**
 
-![Animated demo of the No Signal sign up screen with email and password fields](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ksfkyl2oqla9qyoho6xalw.gif)
+![Animated demo of the No Signal sign up screen with email and password fields](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-ksfkyl2oqla9qyoho6xalw.gif "Live Demo of Create Profile")
 
 Live Demo of Create Profile
 
@@ -660,7 +660,7 @@ Live Demo of Create Profile
 
 It works. Let’s see how things look at the appwrite dashboard
 
-![Appwrite Storage page showing the uploaded profile picture file](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-w8gfhfserxm69eopjjc4gg.png)
+![Appwrite Storage page showing the uploaded profile picture file](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-w8gfhfserxm69eopjjc4gg.png "STORAGE API")
 
 STORAGE API
 
@@ -668,7 +668,7 @@ We could see an image and it looks like the one we uploaded as our profile pictu
 
 **Let’s check the permissions**
 
-![Appwrite Update File dialog showing read and write access roles for the image](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-sllcuijqv7lw1kado8vzjw.png)
+![Appwrite Update File dialog showing read and write access roles for the image](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-sllcuijqv7lw1kado8vzjw.png "Image permissions")
 
 Image permissions
 
@@ -678,17 +678,17 @@ Our functions for Storage API are working perfectly as expected.
 
 **Let’s look at Users now**
 
-![Appwrite Users page listing the unverified test user Biswa](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-pfa9e-dsoxmilaemarvzg.png)
+![Appwrite Users page listing the unverified test user Biswa](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-pfa9e-dsoxmilaemarvzg.png "Users API")
 
 Users API
 
 **And Lastly at the Users Collection in Database Tab**
 
-![Users collection showing one document with name, bio, imgId and email](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-gm-d-ekqgjzpnpagi6jx3q.png)
+![Users collection showing one document with name, bio, imgId and email](/blog/building-no-signal-using-flutter-and-appwrite-part-2/1-gm-d-ekqgjzpnpagi6jx3q.png "Users Collection")
 
 Users Collection
 
-![Happy baby penguin dancing on the snow](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-ys5nm14nqmgagao1.gif)
+![Happy baby penguin dancing on the snow](/blog/building-no-signal-using-flutter-and-appwrite-part-2/0-ys5nm14nqmgagao1.gif "Happy Penguin GIF")
 
 Happy Penguin GIF
 

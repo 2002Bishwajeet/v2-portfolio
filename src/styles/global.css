@@ -529,6 +529,59 @@ footer {
     display: block;
 }
 
+/* Center in-content media: images/GIFs and third-party embeds (Tenor, Giphy,
+   YouTube, X/Twitter). Exclude link-card thumbnails — they're flex children and
+   auto margins would break the card layout. */
+.prose img:not(.link-card-thumb) {
+    margin-inline: auto;
+}
+.prose .tenor-gif-embed {
+    display: flex;
+    justify-content: center;
+}
+.prose .giphy-embed,
+.prose .video-embed,
+.prose .twitter-tweet,
+.prose twitter-widget {
+    margin-inline: auto !important;
+}
+.prose twitter-widget {
+    display: block;
+}
+
+/* Responsive 16:9 wrapper for YouTube / Giphy iframe embeds. */
+.prose .video-embed {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    margin: 1.6rem auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--brown-darkest);
+}
+.prose .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Captioned images: centered image with a muted caption underneath. */
+.prose figure.post-figure {
+    margin: 1.6rem 0;
+}
+.prose figure.post-figure img {
+    margin-inline: auto;
+}
+.prose figure.post-figure figcaption {
+    margin-top: 0.6rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--brown-medium);
+}
+
 /* Link preview cards (imported from Medium "mixtape" embeds).
    Rendering adapts to the preview's shape and content:
      • square/portrait thumbnail → tile on the left, text beside it (standard)

@@ -35,6 +35,8 @@ Well, _Gitpod solves this as one of the problems_. Ever needed to work on someth
 
 **To know more about Gitpod**
 
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/XcjqapXfrhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+
 <a class="link-card" href="https://www.gitpod.io/" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-mcpgz1dm9jreat38.jpg" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">Gitpod: Always ready to code.</span><span class="link-card-desc">Spin up fresh, automated dev environments for each task, in the cloud, in seconds. Open a workspace. Start from any Git…</span><span class="link-card-host">www.gitpod.io</span></span></a>
 
 If you want to learn and deep dive into Gitpod, here’s an awesome 12hr video by [**_freecodecamp_**](https://www.freecodecamp.org/news/) **_._**
@@ -51,7 +53,7 @@ All the source code is publicly available in the GitHub Repository. You can even
 
 I have written a quite a few blogs about appwrite but lemme explain it again for my new readers :
 
-![Appwrite founder Eldad presenting to camera beside the Appwrite logo](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-hzj-3mm5murh5jjkkgj5wq.png)
+![Appwrite founder Eldad presenting to camera beside the Appwrite logo](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/1-hzj-3mm5murh5jjkkgj5wq.png "I am sorry Eldad (someone had to do it xD)")
 
 I am sorry Eldad (someone had to do it xD)
 
@@ -185,7 +187,7 @@ The next thing I did was read the `contribution.md` guide. The first thing neede
 
 I needed to make sure, I was adding them in alphabetical order as mentioned in the guide. For icon, I just googled Dailymotion icon, found an `.ai` (Adobe Illustrator) file, exported `100x100` png file and uploaded in `public/images/users` . The file name should be saved as the name of the provider in all lowercase. You only need to add `icon` prefix in the code only. It was something like this.
 
-![Dailymotion "d" icon in white on a blue background](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-nm8gcv795xffxjk.png)
+![Dailymotion "d" icon in white on a blue background](/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-nm8gcv795xffxjk.png "dailymotion.png")
 
 dailymotion.png
 
@@ -553,6 +555,8 @@ You can have a look at it. You would notice, that I left some comments for the m
 **Thanks a lot for reading till the end.** I hope you definitely gained some knowledge and values by reading this.
 
 Recently my GitHub sponsors badge went live. If you like my blogs and want to support me, here’s the link for that
+
+<div class="video-embed"><iframe src="https://giphy.com/embed/4QX7CAbekKdCZ8l4zX" class="giphy-embed" frameborder="0" allowfullscreen loading="lazy"></iframe></div>
 
 <a class="link-card" href="https://github.com/sponsors/2002Bishwajeet" target="_blank" rel="noopener"><img class="link-card-thumb" src="/blog/how-i-used-gitpod-to-make-an-open-source-contribution-in-appwrite/0-ote5ut3o4koz6dxb.jpg" alt="" width="160" height="160"><span class="link-card-body"><span class="link-card-title">Sponsor @2002Bishwajeet on GitHub Sponsors</span><span class="link-card-desc">1 sponsor is funding 2002Bishwajeet's work. @2002Bishwajeet's goal is to earn $50 per month This would help to write…</span><span class="link-card-host">github.com</span></span></a>
 

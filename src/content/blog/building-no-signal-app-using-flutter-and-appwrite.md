@@ -13,7 +13,7 @@ Before Starting,
 
 ### **Appwrite! What is Appwrite?**
 
-![Appwrite feature grid: Database, Storage, Users, Functions, Console, Privacy, Security](/blog/building-no-signal-app-using-flutter-and-appwrite/1-4fznvpw8epcvqqcibjkyxq.png)
+![Appwrite feature grid: Database, Storage, Users, Functions, Console, Privacy, Security](/blog/building-no-signal-app-using-flutter-and-appwrite/1-4fznvpw8epcvqqcibjkyxq.png "Features of Appwrite(Screenshot taken from appwrite.io)")
 
 Features of Appwrite(Screenshot taken from appwrite.io)
 
@@ -65,7 +65,7 @@ docker run -it --rm ,
 
 When the Installation is completed, run up your Local host. For me it’s [**http://localhost:5000**](http://localhost:5000.) **.** You can set your own custom endpoint too, but that’s something for later to talk about.
 
-![Appwrite Sign In page with email and password fields on local server](/blog/building-no-signal-app-using-flutter-and-appwrite/1-0trbdo2ncdgtxbyvqozxkq.png)
+![Appwrite Sign In page with email and password fields on local server](/blog/building-no-signal-app-using-flutter-and-appwrite/1-0trbdo2ncdgtxbyvqozxkq.png "Login Page Appwrite")
 
 Login Page Appwrite
 
@@ -162,13 +162,13 @@ These must be added in order to capture the **Appwrite OAuth callback** **URL.**
 
 We need to add a platform to our project. In this case, it’s Flutter. So click on Add Platform. What you will see is this screen
 
-![Register your Flutter App dialog on the iOS tab with Name and Bundle ID fields](/blog/building-no-signal-app-using-flutter-and-appwrite/1-ssqdv5gneqx7ysiryo2rlw.png)
+![Register your Flutter App dialog on the iOS tab with Name and Bundle ID fields](/blog/building-no-signal-app-using-flutter-and-appwrite/1-ssqdv5gneqx7ysiryo2rlw.png "Register your Flutter App(IOS)")
 
 Register your Flutter App(IOS)
 
 Now we are given 5 choices for each of the different platforms. Since I am going to make an app for android I will switch over to Android Tab. You are free to use any platform you want to develop. To check it out here’s the [link](https://appwrite.io/docs/getting-started-for-flutter)
 
-![Register your Flutter App dialog on the Android tab with Name and Package Name fields](/blog/building-no-signal-app-using-flutter-and-appwrite/1-nlro8cz3h1z8twe1ooh79q.png)
+![Register your Flutter App dialog on the Android tab with Name and Package Name fields](/blog/building-no-signal-app-using-flutter-and-appwrite/1-nlro8cz3h1z8twe1ooh79q.png "Register your Flutter App(Android)")
 
 Register your Flutter App(Android)
 
@@ -1122,7 +1122,7 @@ class AuthChecker extends ConsumerWidget {
 
 ### Let’s see how it works
 
-![Animated demo of the No Signal app welcome screen running on a phone](/blog/building-no-signal-app-using-flutter-and-appwrite/1-jiqernnf-mcrvwoft20jag.gif)
+![Animated demo of the No Signal app welcome screen running on a phone](/blog/building-no-signal-app-using-flutter-and-appwrite/1-jiqernnf-mcrvwoft20jag.gif "Working App (Authentication)")
 
 Working App (Authentication)
 

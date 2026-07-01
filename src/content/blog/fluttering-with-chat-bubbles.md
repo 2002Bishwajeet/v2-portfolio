@@ -11,11 +11,11 @@ Let’s be honest. We all wanted to make a perfect chat bubble like Telegram, Wh
 
 I faced this challenge when I was trying to build the chat bubble as close as possible to the current chat apps we use today. If you notice the chat bubble you will see that the time stamp has a little bit of offset relative to the message. This position changes when the text content is more. So defining this type of layout isn’t normally possible with the standard layout widgets.
 
-![Signal purple sent message bubble reading Yo with 12:41 PM timestamp and read tick](/blog/fluttering-with-chat-bubbles/1-ivqnqk3-n3fx25f-1amiw.png)
+![Signal purple sent message bubble reading Yo with 12:41 PM timestamp and read tick](/blog/fluttering-with-chat-bubbles/1-ivqnqk3-n3fx25f-1amiw.png "Chat bubble Signal")
 
 Chat bubble Signal
 
-![WhatsApp green sent bubble reading Hi with 6:24 PM timestamp and blue double ticks](/blog/fluttering-with-chat-bubbles/1-5cnxmbqvsedga890lcfzoq.png)
+![WhatsApp green sent bubble reading Hi with 6:24 PM timestamp and blue double ticks](/blog/fluttering-with-chat-bubbles/1-5cnxmbqvsedga890lcfzoq.png "Chat Bubble Whatsapp")
 
 Chat Bubble Whatsapp
 
@@ -28,6 +28,8 @@ We could even do it with Align but Align takes the size of its parent, and I don
 We need to create a widget that should take the size just as much the child/children need it. For this, we need to go with a little low-level implementation. **_We will be talking about RenderObjects._**
 
 If you like to watch videos and want to know more about RenderObjects, this video by Flutter would be for you
+
+<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/cq34RWXegM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 
 > This video also talks about creating a chat bubble using custom Render Objects but only handles the test case for Text messages. This blog would cover almost entirely everything a chat bubble would have (Text, Images, Videos, Replies).
 

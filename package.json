@@ -13,6 +13,7 @@
     "localize:images": "node scripts/localize-images.mjs",
     "fix:extensions": "node scripts/fix-image-extensions.mjs",
     "style:cards": "node scripts/style-link-cards.mjs",
+    "restore:captions": "node scripts/restore-captions.mjs",
     "test": "node --test scripts/lib/*.test.mjs"
   },
   "dependencies": {
